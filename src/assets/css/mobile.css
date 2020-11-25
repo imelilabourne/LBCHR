@@ -1,0 +1,152 @@
+@media (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 label {
+        font-weight: normal;
+    }
+    #app-header {
+        height: 80px;
+    }
+    #app-brand {
+        position: static;
+        margin: 0 auto;
+        width: 280px;
+        height: 60px;
+    }
+    #app-logo {
+        /*background:url(../img/EMDS_LOGO.jpg) top no-repeat;*/
+        width: 280px;
+        height: 60px;
+    }
+    #app-menu {
+        position: fixed;
+        width: 60%;
+        z-index: 1;
+        top: 0;
+        left: -100%;
+        border-right: 1px solid #999;
+        color: #666;
+        overflow: auto;
+    }
+    #app-contents {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px 50px 10px;
+        position: relative;
+    }
+    .m-menu {
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 15px;
+        padding: 22px 5px;
+        font-size: 1.2em;
+        color: #999;
+        cursor: pointer;
+        border: 1px solid #CCC;
+    }
+    .m-menu:hover {
+        color: #255eac;
+    }
+    #app-menu .m-menu {
+        position: relative;
+        color: #CCC;
+        display: block;
+        text-align: right;
+        width: 100%;
+        border-bottom: 1px solid #999;
+        padding: 0 0 5px;
+        margin: 0 0 20px -15px;
+    }
+    #app-menu .m-menu:hover {
+        color: #0C0;
+    }
+    #user-info {
+        width: 100%;
+    }
+    #user-logo {
+        /*background:url(../img/LBP-Logo.png) top no-repeat;	*/
+        background-size: 120px 120px;
+        height: 120px;
+    }
+    #user-details {
+        border: 1px solid #CCC;
+        padding: 5px 0
+    }
+    #user-details>div {
+        border: none;
+        border-top: 1px solid #CCC;
+        padding: 5px 0;
+    }
+    #user-details>div:first-child,
+    #user-details>div:last-child {
+        border: none;
+    }
+    #user-details>div:first-child {
+        padding: 0 15px
+    }
+    #user-details>div:last-child {
+        padding: 0
+    }
+    #user-details .form-control-static {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+    #user-details>div:first-child .form-control-static {
+        font-weight: bold;
+        padding-left: 0;
+        padding-right: 0
+    }
+    .table-responsive {
+        margin: 0 !important;
+    }
+    .div-th,
+    .div-tf,
+    .m-total,
+    .m-hide {
+        display: none !important;
+    }
+    .div-th div,
+    .div-tr div,
+    .div-tf div {
+        min-height: auto;
+    }
+    .cutdisplay {
+        display: inline;
+    }
+    .cutdisplay:after {
+        display: none;
+    }
+    .m-label,
+    .m-show {
+        display: inline-block;
+    }
+    .footer-nav {
+        margin-top: 10px;
+    }
+    .footer-nav span {
+        display: none;
+    }
+    #top-nav li a:link,
+    #top-nav li a:focus,
+    #top-nav li a:visited {
+        padding: 21px 0;
+    }
+    #top-nav span {
+        /*display: none;*/
+    }
+    #top-nav li:hover {
+        background: none;
+    }
+    .button-holder {
+        margin-bottom: 20px;
+        float: none !important;
+    }
+    #err-msg-div,
+    #conf-msg-div {
+        margin: 20px 0;
+    }
+}
