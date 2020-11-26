@@ -13,6 +13,10 @@ import { CustomerDetailSummaryComponent } from './containers/customer-detail-sum
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './containers/login/login.component';
 import { CreateLMPCComponent } from './containers/create-lmpc/create-lmpc.component';
+<<<<<<< HEAD
+=======
+import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassword.component';
+>>>>>>> 9b2251658e709af622d7ef211bbfb34a22567dbb
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { CreateLMPCComponent } from './containers/create-lmpc/create-lmpc.compon
     CustomerDetailSummaryComponent,
     LoginComponent,
     CreateLMPCComponent,
+<<<<<<< HEAD
+=======
+    ForgotpasswordComponent,
+>>>>>>> 9b2251658e709af622d7ef211bbfb34a22567dbb
   ],
   imports: [
     BrowserModule,
@@ -33,6 +41,10 @@ import { CreateLMPCComponent } from './containers/create-lmpc/create-lmpc.compon
     FormsModule,
     ReactiveFormsModule,
     NgbModule.forRoot()
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9b2251658e709af622d7ef211bbfb34a22567dbb
   ],
   providers: [],
   bootstrap: [AppComponent]
