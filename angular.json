@@ -24,14 +24,29 @@
             ],
             "styles": [
               "src/styles.css",
+<<<<<<< HEAD
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/font-awesome/css/font-awesome.min.css",
+=======
+<<<<<<< Updated upstream
+>>>>>>> 4a2614e681d725e6d0a18620966a0ad3db6f9724
               "src/bootstrap.css",
               "src/assets/css/normalize.css",
               "src/assets/css/web.css",
               "src/assets/css/mobile.css"
+=======
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+,
+              "node_modules/font-awesome/css/font-awesome.min.css"
+>>>>>>> Stashed changes
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
