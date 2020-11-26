@@ -30,10 +30,6 @@ import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassw
     CustomerDetailSummaryComponent,
     LoginComponent,
     CreateLMPCComponent,
-<<<<<<< HEAD
-=======
-    ForgotpasswordComponent,
->>>>>>> 9b2251658e709af622d7ef211bbfb34a22567dbb
   ],
   imports: [
     BrowserModule,
@@ -41,10 +37,6 @@ import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassw
     FormsModule,
     ReactiveFormsModule,
     NgbModule.forRoot()
-<<<<<<< HEAD
-=======
-  
->>>>>>> 9b2251658e709af622d7ef211bbfb34a22567dbb
   ],
   providers: [],
   bootstrap: [AppComponent]
