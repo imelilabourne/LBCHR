@@ -1,0 +1,20 @@
+.row{
+    display: flex;
+}
+
+button{
+    border: none;
+    width: 200px;
+    margin: 4px;
+    padding: 4px;
+}
+
+button:nth-child(1){
+    background-color: rgb(81, 136, 187);
+    color: white;
+}
+
+span{
+    /* float: right; */
+    min-width: 400px;
+}

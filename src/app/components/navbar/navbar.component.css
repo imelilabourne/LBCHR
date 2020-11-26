@@ -1,0 +1,20 @@
+.header > ul{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    border-bottom: 4px rgb(235, 192, 152) solid;
+}
+
+.logo{
+    width: 30px;
+}
+
+ul > li {
+    padding: 0 14px;    
+}
+
+a{
+    font-size: 12px;
+}

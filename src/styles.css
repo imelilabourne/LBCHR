@@ -112,8 +112,9 @@
   * and Chrome.
   */
  
+  
  h1 {
-     color: #FFF;
+     /* color: #FFF; */
      font-size: 1.1em;
      font-style: italic;
      line-height: 15px;
@@ -124,7 +125,7 @@
  h2 {
      font-size: 1em;
      margin: 5px 0px 0px 0px;
-         color:#FFF;
+         /* color:#FFF; */
          text-transform:uppercase;
          letter-spacing:-1px;
          background:none;
@@ -134,7 +135,7 @@
      font-size: 1em;
      margin: 0px;
          /*font-family:Arial;*/
-         color:#fff;
+         /* color:#fff; */
          font-weight:none;
  }
  

@@ -1,0 +1,37 @@
+<div>
+  <h1>PROCESS APPLICATION</h1>
+  <hr>
+
+  <p>Personal Information</p>
+
+  <form [formGroup] = "form">
+    <div>
+      <label>Name of Customer</label><br>
+      <input placeholder="First Name" >
+      <input placeholder="Middle Name">
+      <input placeholder="Last Name">
+      <input placeholder="Jr">
+    </div>
+
+    <div>
+      <label>Date of Birth</label><br>
+      <input placeholder="MMDDYYYY">
+    </div>
+
+    <div>
+      <label>Nationality</label><br>
+      <input placeholder="Filipino">
+    </div>
+
+    <div>
+      <label>Sex</label><br>
+      <input placeholder="SELECT">
+    </div>
+
+    <app-form (getValue) ="getVal($event)" [control] ="form.controls['firstname']" [label]=" 'Name of Customer' "></app-form>
+    <app-form (getValue) ="getVal($event)" [control] ="form.controls['lastname']" [label]=" 'Date of Birth' "></app-form>
+
+  </form>
+
+  <button routerLink="../customer-summary">Next</button>
+</div>
