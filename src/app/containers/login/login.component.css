@@ -1,0 +1,30 @@
+.login-button{
+  width: 105px;
+}
+
+.btn{
+  width: 500px;
+ border-radius:3;
+ text-align: center;
+ 
+}
+img{
+  align-content: center;
+  width:310px; 
+  height:90px;
+  margin-left: 80px;
+
+}
+.border{
+  padding : 15px ;
+}
+.forgot-link{
+  text-align: right;
+}
+
+.container{
+ align-content: center;
+ 
+}
+
+

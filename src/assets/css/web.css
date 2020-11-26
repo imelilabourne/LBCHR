@@ -204,7 +204,7 @@ tfoot .form-control {
 /*** Bootstrap elements tweaking ***/
 
 button {
-    border-radius: 0px !important;
+    border-radius: 5px !important;
 }
 
 .help-block {
