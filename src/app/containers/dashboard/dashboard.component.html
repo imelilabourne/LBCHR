@@ -8,3 +8,94 @@
   </h1>
 </div>
 
+<!-- 1. inline datepicker -->
+<!-- <ngb-datepicker #d></ngb-datepicker> -->
+
+<!-- 2. datepicker in the popup -->
+<!-- <input type="text" ngbDatepicker #d="ngbDatepicker"/> -->
+
+
+<input type="text" ngbDatepicker #d="ngbDatepicker"/>
+<button (click)="d.toggle()">Toggle</button>
+
+
+<p>You can easily control dropdowns programmatically using the exported dropdown instance.</p>
+
+<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+  <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Toggle dropdown</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownManual">
+    <button ngbDropdownItem>Action - 1</button>
+    <button ngbDropdownItem>Another Action</button>
+    <button ngbDropdownItem>Something else is here</button>
+  </div>
+</div>
+
+<ngb-accordion [closeOthers]="true" activeIds="static-1">
+  <ngb-panel id="static-1" title="Simple">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel id="static-2">
+    <ng-template ngbPanelTitle>
+      <span>&#9733; <b>Fancy</b> title &#9733;</span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel id="static-3" title="Disabled" [disabled]="true">
+    <ng-template ngbPanelContent>
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+      labore sustainable VHS.
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+<ngb-alert *ngIf="isOpen" (closed)="isOpen = false">I'm open</ngb-alert> -->
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="dateOfBirth">Date of birth</label>
+        <div class="input-group">
+          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr>
+
+<pre>{{ closeResult }}</pre>
