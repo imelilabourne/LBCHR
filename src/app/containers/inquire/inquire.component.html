@@ -1,83 +1,167 @@
 <app-navbar></app-navbar>
-
-<div>
-  <h1>INQUIRE APPLICATION</h1>
-  <hr>
-  <form>
-    <h5>Search Criteria</h5>
-
-    <div class="row">
-      <div>
-        <div>
-          <p>Application No.</p>
-          <input >
-        </div>
-  
-        <div>
-          <p>Name</p>
-          <input >
-        </div>
-  
-      </div>
-      <div>
-        <div>
-          <p>Mobile No.</p>
-          <input >
-        </div>
-  
-        <div>
-          <p>Email Address</p>
-          <input >
-        </div>
-  
-
-      </div>
-
-
+<div class="container-fluid main">
+  <div>
+    <div class="head-main">
+      <h1>INQUIRE APPLICATION</h1>
     </div>
-      <hr>
-    <div>
-      <button>Search</button>
-      <button>Clear</button>
-    </div>
+    <form>
+      <div class="section-content">
+        <p>Search Criteria</p>
+        <div class="row">
+          <!-- row between buttons and inputs -->
+          <div class="col-md-10" style="border-right: 1px solid #ccc;">
+            <div class="row">
+              <div class="col-md-6">
+
+                <div class="form-group">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <label class="col-md-4 control-label">Application No.</label>
+                      <input class="col-md-8 form-control">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <label class="col-md-4 control-label">Name</label>
+                      <input class="col-md-8 form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <label class="col-md-4 control-label">Mobile No.</label>
+                      <input class="col-md-8 form-control">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <label class="col-md-4 control-label">Email Address</label>
+                      <input class="col-md-8 form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-2">
+            <button class="btn form-btn btn-search"><i class="fa fa-search"></i>Search</button>
+            <button class="btn form-btn btn-clear">Clear</button>
+          </div>
+
+        </div>
+      </div>
+
 
     </form>
-</div>
-<br>
-<div>
-  <a routerLink ="../inquire-summary">Inquire</a>
-  <table style="width: 100%;">
-      <tr>
-        <th></th>
-        <th>Application No.</th>
-        <th>Name</th>
-        <th>Mobile No.</th>
-        <th>Email Address</th>
-        <th>Product Type</th>
-        <th>Status</th>
-        <th>Process Date</th>
-      </tr>
-      <tr>
-        <td><input type="radio"></td>
-        <td>AP0000000769</td>
-        <td>ROBERT SANTIAGO</td>
-        <td>09928149210</td>
-        <td>email@gmail.com</td>
-        <td></td>
-        <td>FOR CORP APPROVAL</td>
-        <td>11/25/2020 09:23:11</td>
-      </tr>
+  </div>
 
-      <tr>
-        <td><input type="radio"></td>
-        <td>AP0000000769</td>
-        <td>ROBERT SANTIAGO</td>
-        <td>09928149210</td>
-        <td>email@gmail.com</td>
-        <td></td>
-        <td>FOR CORP APPROVAL</td>
-        <td>11/25/2020 09:23:11</td>
-      </tr>
-  </table>
-  <p>Pagination</p>
+  <div class="section-content">
+    <div class="">
+      <!-- second container-div -->
+      <a routerLink="../inquire-summary" style="float: right; font-size: 12px; margin-bottom: 10px"><i
+          class="fa fa-wpforms"></i>Inquire</a>
+      <div class=" table-responsive" style="width: 100%">
+
+
+        <table class="table table-condensed table-hover table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Application No.</th>
+              <th scope="col" style="width: 260px;">Name</th>
+              <th scope="col">Mobile No.</th>
+              <th scope="col">Email Address</th>
+              <th scope="col">Product Type</th>
+              <th scope="col">Status</th>
+              <th scope="col">Process Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="radio"></td>
+              <td>AP0000000769</td>
+              <td>ROBERT SANTIAGO</td>
+              <td>09928149210</td>
+              <td>email@gmail.com</td>
+              <td></td>
+              <td>FOR CORP APPROVAL</td>
+              <td>11/25/2020 09:23:11</td>
+            </tr>
+
+            <tr>
+              <td><input type="radio"></td>
+              <td>AP0000000769</td>
+              <td>ELI LABOURNE SERQUINA S ELI ULIT TRY MAHABA DE TORRES</td>
+              <td>09928149210</td>
+              <td>email@gmail.com</td>
+              <td></td>
+              <td>FOR CORP APPROVAL</td>
+              <td>11/25/2020 09:23:11</td>
+            </tr>
+          </tbody>
+
+          <!--
+        <tfoot class="">
+          <tr id="tbl-paging">
+            <td colspan="8">
+              <div class="col-sm-3">
+                <span class="">Page 1 of 0 </span>
+                <span class="">Total No. of Records: </span>
+              </div>
+              
+              <div class="col-sm-6 ">
+                <button class="btn btn-default " type="button" disabled="">‹‹</button>
+                <button class="btn btn-default  " type="button" disabled="">‹</button>
+                <input autocomplete="new-text" class="form-control" formcontrolname="pageInput" type="text">
+                <button class="btn btn-default " type="button" disabled="">Go to Page</button>
+                <button class="btn btn-default  " type="button" disabled="">›</button>
+                <button class="btn btn-default " type="button" disabled="">
+                  ››
+                </button>
+              </div><div class="col-sm-3"></div>
+            </td>
+          </tr>
+        </tfoot>
+      -->
+        </table>
+        <div class="d-flex page">
+          <div class="col-sm-3 col-md-3">
+            <span class="">Page 1 of 0 </span>
+            <span class="">Total No. of Records: </span>
+          </div>
+
+          <div class="col-sm-6 col-md-6">
+            <button class="btn btn-default " type="button" disabled="">‹‹</button>
+            <button class="btn btn-default  " type="button" disabled="">‹</button>
+            <input autocomplete="new-text" class="form-control" formcontrolname="pageInput" type="text">
+            <button class="btn btn-default " type="button" disabled="">Go to Page</button>
+            <button class="btn btn-default  " type="button" disabled="">›</button>
+            <button class="btn btn-default " type="button" disabled="">››</button>
+          </div>
+          <div class="col-sm-3 col-md-3"></div>
+          <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshCountries()">
+        </ngb-pagination>
+      
+        <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
+          <option [ngValue]="2">2 items per page</option>
+          <option [ngValue]="4">4 items per page</option>
+          <option [ngValue]="6">6 items per page</option>
+        </select> -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </div>

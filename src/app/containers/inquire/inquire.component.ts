@@ -6,8 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inquire.component.css']
 })
 export class InquireComponent implements OnInit {
+  page = 1;
+  pageSize = 4;
+  constructor() {
+    this.refreshCountries();
+  }
 
-  constructor() { }
+  refreshCountries() {
+
+  }
 
   ngOnInit() {
   }

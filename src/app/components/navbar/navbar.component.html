@@ -5,20 +5,23 @@
     </li>
     <hr>
 
-    <li>
+    <li class="d-flex"> 
       NAC10702 USER <img style="height: 10px; margin: auto;" src="../../../assets/img/dropdown-arrow.png">
     </li>
     <li>
-      <span>25-11-2020 09:43:06 AM</span>
+      <span class="date">
+        <!-- 25-11-2020 09:43:06 AM  -->
+        {{now | date: 'medium'}}
+      </span>
     </li>
     <li>
-      <a>
+      <a class="active">
         <i class="fa fa-home"></i><span>HOME</span>
       </a>
     </li>
     <li>
       <a>
-        <i class="fa fa-sign-out"> </i>LOGOUT
+        <i class="fa fa-sign-out"></i><span>LOGOUT</span>
       </a>
     </li>
   </ul>

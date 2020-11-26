@@ -1,0 +1,60 @@
+.dashboard-lbp{
+    /* margin: auto; */
+    width: 200px;
+    height: 20px;
+    background-size: 100%;
+    background-image: url("../../../assets/img/dashboard_lbp.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.greetings{
+    text-align: center;
+}
+
+
+.italic{
+    font-style: italic;
+    border-bottom:rgb(228, 174, 25) solid;
+    font-size: smaller;
+}
+
+.img-wrapper{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-wrapper{
+    margin: 70px 0px 0 0;
+}
+
+@media only screen and (max-width: 650px){
+    .logo-wrapper{
+        margin:0;
+    }
+}
+
+h1{
+    border-bottom: 1px solid #ccc;
+    color: #026b05;
+}
+
+label{
+    margin: 0;
+    padding-top: 5px;
+    font-weight: bold;
+    width: 240px;
+}
+
+.row{
+    margin: 10px 0;
+}
+
+
+.logo-wrapper > div{
+    margin: auto;
+}
+/* .card{
+    max-width: 450px;
+} */

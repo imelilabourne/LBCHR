@@ -89,6 +89,7 @@ h6 {
     color: #154C8A;
 } */
 
+
 ul,
 ol {
     font-size: 0.8em;
@@ -1596,7 +1597,7 @@ td:not(.table-footer) {
 
 th {
     color: white;
-    background: #0b1f4f;
+    background: #21be5c;
     border-bottom: 4px solid #9ea7af;
     vertical-align: left;
 }
@@ -1656,7 +1657,7 @@ tr.row-result:nth-child(odd):hover td:not(.color-row) {
 }
 
 td {
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
 }
 

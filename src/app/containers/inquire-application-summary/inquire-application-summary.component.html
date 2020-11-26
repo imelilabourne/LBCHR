@@ -1,19 +1,211 @@
 <app-navbar></app-navbar>
 
-<div>
-  <p>CUSTOMER INQUIRE</p>
-  <p>CLIENT NAME: ELI LABOURNE</p>
-  <hr>
-  <p>CLIENT INFORMATION SUMMARY</p>
-  <div>
-    <span>Personal Information</span>
+<div class="container-fluid main">
+  <div class="head-outer">
+    <div class="d-flex justify-content-between head align-items-center">
+      <h1>CUSTOMER INQUIRE</h1>
+      <p>CLIENT NAME: ELI LABOURNE</p>
+    </div>
+    <p>CLIENT INFORMATION SUMMARY</p>
   </div>
 
   <div>
-    <span>Financial Information</span>
+    <span class="text-inside-div">Personal Information</span>
+
+    <!--  -->
+
+    <div class="section-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="control-label">Name of Customer</label>
+
+              <div>
+                <p class="">FELMER EUSEBIO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <hr />
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="control-label">Date of Birth</label>
+            <div>
+              <p class="">JULY 17, 1998</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">Nationality</label>
+            <div>
+              <p class="">FILIPINO</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">Sex</label>
+            <div>
+              <p class="">FEMALE</p>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <hr />
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="control-label">Place of Birth</label>
+            <div>
+              <p class="">BATANGAS</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">CIVIL STATUS</label>
+            <div>
+              <p class="">SINGLE</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">Mother's Maiden Name</label>
+            <div>
+              <p class="">DG</p>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <hr />
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label class="control-label">Present Address</label>
+              <div>
+                <p class="">QUEZON CITY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label class="control-label">Permanent Address</label>
+              <div>
+                <p class="">QUEZON CITY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <hr />
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="control-label">Mobile No.</label>
+            <div>
+              <p class="">09959143486</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">E-Mail Address</label>
+            <div>
+              <p class="">elilabourne.detorres@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <button routerLink="/inquire">Back</button>
- <button routerLink="/inquire-client">Continue Application</button>
+  <div>
+    <span class="text-inside-div">Valid IDs</span>
 
+    <div class="section-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="control-label">Type of ID</label>
+            <div>
+              <p class="">PHILSYS REGISTRATION NO</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">
+              ID Number</label>
+            <div>
+              <p class="">46436242346346575486868658545</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+
+  <div>
+    <span class="text-inside-div">Financial Information</span>
+
+    <div class="section-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <label class="control-label">Occupation
+            </label>
+            <div>
+              <p class="">FARMER / FISHER</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!--  -->
+
+        <hr />
+        <div class="row">
+          <div class="col-sm-4">
+            <label class="control-label">Source of Wealth</label>
+            <div>
+              <p class="">ALLOWANCE</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">Gross Monthly Income</label>
+            <div>
+              <p class="">PHP 30,000 & BELOW
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <label class="control-label">Tax Identification Number (TIN)</label>
+            <div>
+              <p class=""></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+  
+
+  <div class="d-flex justify-content-between">
+    <a routerLink="/inquire"><i class="fa fa-chevron-left"></i>Back</a>
+    <button class="continue-btn" routerLink="/inquire-client">Continue Application</button>
+  </div>
+    <br>
 </div>

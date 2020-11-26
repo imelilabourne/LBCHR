@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public now: Date = new Date();
 
+  constructor() {
+      setInterval(() => {
+        this.now = new Date();
+      }, 1);
+  }
   ngOnInit() {
   }
 
