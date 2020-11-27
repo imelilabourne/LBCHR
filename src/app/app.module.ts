@@ -14,8 +14,12 @@ import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './containers/login/login.component';
 import { CreateLMPCComponent } from './containers/create-lmpc/create-lmpc.component';
 import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassword.component';
+<<<<<<< Updated upstream
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
+=======
+import { LmpcClientinfoComponent } from './containers/lmpc-clientinfo/lmpc-clientinfo.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     LoginComponent,
     CreateLMPCComponent,
     ForgotpasswordComponent,
+<<<<<<< Updated upstream
     SidebarComponent,
+=======
+    LmpcClientinfoComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
