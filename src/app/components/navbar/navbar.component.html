@@ -1,29 +1,117 @@
 <nav class="header">
   <ul>
     <li>
-      <img class="logo" src="../../../assets/img/landbank-logo.png">
+      <div class="burger"></div>
+      <div class="burger"></div>
+      <div class="burger"></div>
     </li>
-    <hr>
+    <li>
+      <img class="logo" src="../../../assets/img/landbank-logo.png" />
+    </li>
+    <hr />
 
-    <li class="d-flex"> 
-      NAC10702 USER <img style="height: 10px; margin: auto;" src="../../../assets/img/dropdown-arrow.png">
+    <li class="d-flex">
+      NAC10702 USER
+      <button (click)="toggle()" style="background-color: inherit; border: none; height: inherit; margin-top: -5px;">
+        <img
+        style="height: 10px; margin: auto"
+        src="../../../assets/img/dropdown-arrow.png"
+      />
+      </button>
+      <div id="usrInfo" *ngIf = "isClicked" >
+        <ul class="list-group" id="usrMenu">
+          <li class="list-group-item">
+            <a
+              ><i class="fa fa-lg fa-fw fa-sliders"></i>
+              Security Settings</a
+            >
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a style="cursor: pointer">Change Password</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <a
+              ><i class="fa fa-lg fa-fw fa-history"></i>
+              Account Activities</a
+            >
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a>Access Log</a>
+              </li>
+              <li class="list-group-item">
+                <a>Transaction Log</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>NAC10702 USER</h3>
+            <span id="userRole"></span
+            ><span id="userRC">Landbank Corp.</span>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <label class="control-label col-sm-6"
+                >User Branch</label
+              >
+              <p class="form-control-static col-sm-6">
+                110 - SAN JOSE CITY (NE)
+              </p>
+            </div>
+            <div class="row">
+              <label class="control-label col-sm-6"
+                >Last Login Date</label
+              >
+              <p class="form-control-static col-sm-6">
+                11/27/2020 05:50:45 AM
+              </p>
+            </div>
+            <div class="row">
+              <label class="control-label col-sm-6"
+                >Invalid Login Attempt</label
+              >
+              <p class="form-control-static col-sm-6">0</p>
+            </div>
+            <div class="row">
+              <label class="control-label col-sm-6"
+                >Last Password Changed</label
+              >
+              <p class="form-control-static col-sm-6"></p>
+            </div>
+            <div class="row">
+              <label class="control-label col-sm-6"
+                >Password Validity</label
+              >
+              <p class="form-control-static col-sm-6">
+                08/17/2023
+              </p>
+            </div>
+            <div class="row">
+              <label class="control-label col-sm-6"
+                >User ID Validity</label
+              >
+              <p class="form-control-static col-sm-6">
+                Valid until
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
     <li>
       <span class="date">
         <!-- 25-11-2020 09:43:06 AM  -->
-        {{now | date: 'medium'}}
+        {{ now | date: "medium" }}
       </span>
     </li>
     <li>
-      <a class="active">
-        <i class="fa fa-home"></i><span>HOME</span>
-      </a>
+      <a class="active"> <i class="fa fa-home"></i><span>HOME</span> </a>
     </li>
     <li>
-      <a>
-        <i class="fa fa-sign-out"></i><span>LOGOUT</span>
-      </a>
+      <a> <i class="fa fa-sign-out"></i><span>LOGOUT</span> </a>
     </li>
   </ul>
-  
 </nav>

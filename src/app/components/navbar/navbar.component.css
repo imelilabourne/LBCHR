@@ -41,3 +41,31 @@ ul > li {
 ul{
     margin: 4px 0;
 }
+
+#usrInfo{
+    /* display: ; */
+    position: absolute;
+    top: 27px;
+    right: 0;
+    width: 450px;
+    /* border: 1px solid #fec84c; */
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+    cursor: default;
+    z-index: 1;
+    padding: 20px;
+}
+
+@media (max-width: 450px){
+    #usrInfo{
+        width: 200px;
+    }
+}
+
+.burger{
+    width: 14px;
+    height: 2px;
+    background-color: black;
+    margin: 1.5px 0;
+}

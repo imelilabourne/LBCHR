@@ -12,4 +12,7 @@ export class CustomerDetailSummaryComponent implements OnInit {
   ngOnInit() {
   }
 
+  alertbox(){
+    alert("Are you sure you want to submit changes?")
+  }
 }

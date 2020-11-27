@@ -1788,22 +1788,6 @@ td {
     padding-left: 30px;
 }
 
-.btn-success {
-    background-color: #126c99;
-    border-color: #126c99;
-    color: white;
-}
-
-.btn-warning {
-    background-color: #282525;
-    border-color: #282525;
-}
-
-.btn-danger {
-    background-color: #154C8A;
-    border-color: #154C8A;
-}
-
 .header-button {
     padding-left: 20px;
     padding-right: 20px;

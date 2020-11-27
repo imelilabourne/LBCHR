@@ -14,6 +14,8 @@ import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './containers/login/login.component';
 import { CreateLMPCComponent } from './containers/create-lmpc/create-lmpc.component';
 import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassword.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassw
     CustomerDetailSummaryComponent,
     LoginComponent,
     CreateLMPCComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

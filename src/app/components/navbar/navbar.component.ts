@@ -9,6 +9,8 @@ export class NavbarComponent implements OnInit {
 
   public now: Date = new Date();
 
+  isClicked: boolean = false;
+
   constructor() {
       setInterval(() => {
         this.now = new Date();
@@ -17,5 +19,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggle(){
+    this.isClicked = !this.isClicked;
+  }
 
 }

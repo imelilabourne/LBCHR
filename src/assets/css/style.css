@@ -6,3 +6,25 @@ i{
 .head-main{
     padding: 20px 0;
 }
+
+
+.text-inside-div{
+    position: absolute;
+    margin: -10px 0 0 12px;    
+    background-color: #fff;
+    padding: 0 6px;
+}
+
+
+.main-view-mobile{
+    min-width: 300px;
+}
+
+.title{
+    border-bottom: 1px solid #ccc;
+    color: #026b05;
+}
+
+button{
+    padding: 4px 10px;
+}
