@@ -3,7 +3,7 @@
 }
 
 .btn{
-  width: 500px;
+ 
  border-radius:3;
  text-align: center;
  
@@ -26,5 +26,81 @@ img{
  align-content: center;
  
 }
+
+
+#login-box.panel .panel-footer {
+    background: 0 0;
+}
+#login-box.panel .panel-body, #login-box.panel .panel-footer, #login-box.panel .panel-heading, #login-box.panel .panel-title {
+    background: 0 0;
+    margin: 1px;
+    border: none;
+}
+.panel .panel-footer {
+    padding: 5px 15px;
+    font-size: 10.8px;
+}
+.panel-footer {
+    padding: 10px 15px;
+  
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.btn-success {
+  background: #1a9101;
+  border: 1px solid #115e01;
+}
+.btn {
+  outline: 0!important;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+}
+.button, input[type=file], input[type=password], input[type=text], select, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.body, button, ol, p, table, ul {
+  font: 15px;
+}
+.button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.button, select {
+  text-transform: none;
+}
+.button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+li{
+  margin-top: 5px;
+}
+
 
 
