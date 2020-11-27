@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
   public now: Date = new Date();
 
   isClicked: boolean = false;
-
+  boo: boolean = false;
   constructor() {
       setInterval(() => {
         this.now = new Date();
@@ -21,6 +21,16 @@ export class NavbarComponent implements OnInit {
 
   toggle(){
     this.isClicked = !this.isClicked;
+  }
+
+  @HostListener("document:scroll")
+  scrollfunction(){
+    if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0){
+      this.boo = true;
+    }
+    else{
+      this.boo = false;
+    }
   }
 
 }

@@ -68,4 +68,16 @@ ul{
     height: 2px;
     background-color: black;
     margin: 1.5px 0;
+    visibility: hidden;
 }
+
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(240, 186, 26);
+    animation: ease-in-out 10s;
+    z-index: 1;
+    border-bottom : .5px rgb(228, 174, 25) solid ;
+
+  }

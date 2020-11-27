@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  isClicked: boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggle(){
+    this.isClicked = !this.isClicked;
   }
 
 }

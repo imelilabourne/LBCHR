@@ -31,7 +31,8 @@ import { LmpcClientinfoComponent } from './containers/lmpc-clientinfo/lmpc-clien
     LoginComponent,
     CreateLMPCComponent,
     ForgotpasswordComponent,
-    LmpcClientinfoComponent
+    LmpcClientinfoComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

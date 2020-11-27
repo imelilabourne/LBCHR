@@ -11,7 +11,8 @@ import {CreateLMPCComponent} from './containers/create-lmpc/create-lmpc.componen
 import {LmpcClientinfoComponent } from './containers/lmpc-clientinfo/lmpc-clientinfo.component';
 
 const routes: Routes = [
-  {path: '', component: DashboardComponent},
+  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'login', component: LoginComponent},
   {path: 'forgotPassword', component: ForgotpasswordComponent},
   {path: 'corporateAcctInit', component: CreateLMPCComponent},

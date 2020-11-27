@@ -1,4 +1,4 @@
-<nav class="header">
+<nav [class.sticky] = "boo" class="header">
   <ul>
     <li>
       <div class="burger"></div>
@@ -108,7 +108,7 @@
       </span>
     </li>
     <li>
-      <a class="active"> <i class="fa fa-home"></i><span>HOME</span> </a>
+      <a routerLink="../" class="active"> <i class="fa fa-home"></i><span>HOME</span> </a>
     </li>
     <li>
       <a> <i class="fa fa-sign-out"></i><span>LOGOUT</span> </a>
