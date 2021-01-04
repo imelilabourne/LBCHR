@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
@@ -17,7 +17,10 @@ import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassw
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { LmpcClientinfoComponent } from './containers/lmpc-clientinfo/lmpc-clientinfo.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { InquireMaintenanceComponent } from './containers/inquire/inquire-maintenance/inquire-maintenance.component';
+import { SearchCriteriaFormGroupComponent } from './containers/inquire/search-criteria-form-group/search-criteria-form-group.component';
+import { DynamicFormQuestionComponent } from './components/shared/dynamic-form-question.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,16 +35,21 @@ import { LmpcClientinfoComponent } from './containers/lmpc-clientinfo/lmpc-clien
     CreateLMPCComponent,
     ForgotpasswordComponent,
     LmpcClientinfoComponent,
-    SidebarComponent
+    SidebarComponent,
+    InquireMaintenanceComponent,
+    SearchCriteriaFormGroupComponent,
+    DynamicFormQuestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -2,6 +2,10 @@
   width: 105px;
 }
 
+app-navbar{
+  display: none;
+}
+
 .btn{
  
  border-radius:3;

@@ -21,7 +21,7 @@ body.background-image {
     /* background-image: url("") !important; */
 }
 
-body,
+/* body,
 input,
 select,
 textarea,
@@ -35,7 +35,7 @@ h5,
 h6,
 button {
     font: 16px Lato;
-}
+} */
 
 body {
     width: 100%;
@@ -142,15 +142,16 @@ table {
 }
 
 td {
-    font-size: 1em;
-    padding: 3px;
+    font-size: .8em;
+    padding: 15px;
+    text-transform: uppercase;
 }
 
 th {
     font-weight: normal;
     font-size: 1em;
     background: #f9f8e8;
-    padding: 15px;
+    padding: 3px;
     text-align: center;
 }
 
@@ -239,13 +240,13 @@ button {
 .checkbox label,
 .radio label,
 .form-inline {
-    font-size: 0.75em;
+    font-size: 0.65em;
     color: #333;
     font-weight: normal;
 }
 
 .form-control {
-    height: auto;
+    /* height: auto; */
     padding: 4px 12px
 }
 
@@ -602,7 +603,6 @@ button {
     background: #EFEFEF;
 }
 
-#app-menu a* {}
 
 #app-menu a i:first-child {
     display: inline-block;
@@ -824,7 +824,7 @@ button {
     color: #F00;
     position: absolute;
     top: 0;
-    right: -8px;
+    /* right: -8px; */
     font-size: 16px;
 }
 
@@ -1598,7 +1598,7 @@ td:not(.table-footer) {
 th {
     color: white;
     background: #21be5c;
-    border-bottom: 4px solid #9ea7af;
+    border-bottom: 2px solid #999;
     vertical-align: left;
 }
 
@@ -1684,10 +1684,6 @@ td {
     .btn-default.action-button {
         font-size: 9px;
     }
-}
-
-.form-control {
-    border-radius: 0px;
 }
 
 .alert-info {

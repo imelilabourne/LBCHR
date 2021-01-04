@@ -125,18 +125,15 @@ a:hover {
 
 h1 {
     /* color: #FFF; */
-    font-size: 1.1em;
-    font-style: italic;
+    font-size: .85em;
     line-height: 15px;
     margin: 0 !important;
     padding: 0 !important;
 }
 
 h2 {
-    font-size: 1em;
+    font-size: .8em;
     margin: 5px 0px 0px 0px;
-		/* color:#FFF; */
-		text-transform:uppercase;
 		letter-spacing:-1px;
 		background:none;
 }
@@ -144,9 +141,7 @@ h2 {
 h3 {
     font-size: 1em;
     margin: 0px;
-		/*font-family:Arial;*/
-		/* color:#fff; */
-		font-weight:none;
+	font-weight:none;
 }
 
 h4 {

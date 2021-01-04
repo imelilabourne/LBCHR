@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+
 <div class="container-fluid main">
   <div>
     <div class="head-main">
@@ -6,7 +6,7 @@
     </div>
     <form>
       <div class="section-content">
-        <p>Search Criteria</p>
+        <h2>Search Criteria</h2>
         <div class="row">
           <!-- row between buttons and inputs -->
           <div class="col-md-10" style="border-right: 1px solid #ccc;">
@@ -16,7 +16,7 @@
                 <div class="form-group">
                   <div class="container-fluid">
                     <div class="row">
-                      <label class="col-md-4 control-label">Application No.</label>
+                      <label class="search-lbl col-md-4 control-label">Application No.</label>
                       <input class="col-md-8 form-control">
                     </div>
                   </div>
@@ -25,7 +25,7 @@
                 <div class="form-group">
                   <div class="container-fluid">
                     <div class="row">
-                      <label class="col-md-4 control-label">Name</label>
+                      <label class="search-lbl col-md-4 control-label">Name</label>
                       <input class="col-md-8 form-control">
                     </div>
                   </div>
@@ -36,7 +36,7 @@
                 <div class="form-group">
                   <div class="container-fluid">
                     <div class="row">
-                      <label class="col-md-4 control-label">Mobile No.</label>
+                      <label class="search-lbl col-md-4 control-label">Mobile No.</label>
                       <input class="col-md-8 form-control">
                     </div>
                   </div>
@@ -45,7 +45,7 @@
                 <div class="form-group">
                   <div class="container-fluid">
                     <div class="row">
-                      <label class="col-md-4 control-label">Email Address</label>
+                      <label class="search-lbl col-md-4 control-label">Email Address</label>
                       <input class="col-md-8 form-control">
                     </div>
                   </div>
@@ -88,23 +88,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr *ngFor="let app of application">
               <td><input type="radio"></td>
-              <td>AP0000000769</td>
-              <td>ROBERT SANTIAGO</td>
-              <td>09928149210</td>
-              <td>email@gmail.com</td>
-              <td></td>
-              <td>FOR CORP APPROVAL</td>
-              <td>11/25/2020 09:23:11</td>
-            </tr>
-
-            <tr>
-              <td><input type="radio"></td>
-              <td>AP0000000769</td>
-              <td>ELI LABOURNE SERQUINA S ELI ULIT TRY MAHABA DE TORRES</td>
-              <td>09928149210</td>
-              <td>email@gmail.com</td>
+              <td>AP000000076{{app.id}}</td>
+              <td>{{ app.name }}</td>
+              <td>{{ app.mobileNum }}</td>
+              <td>{{ app.email }}</td>
               <td></td>
               <td>FOR CORP APPROVAL</td>
               <td>11/25/2020 09:23:11</td>
@@ -135,13 +124,15 @@
         </tfoot>
       -->
         </table>
-        <div class="d-flex page">
-          <div class="col-sm-3 col-md-3">
-            <span class="">Page 1 of 0 </span>
-            <span class="">Total No. of Records: </span>
+        <div class="container">
+  
+        <div class="page row">
+          <div class="col-sm-12 col-md-3" >
+            <span class="">Page 1 of 1 </span>
+            <span class="">Total No. of Records: {{ application?.length }}</span>
           </div>
 
-          <div class="col-sm-6 col-md-6">
+          <div class="col-sm-12 col-md-6">
             <button class="btn btn-default " type="button" disabled="">‹‹</button>
             <button class="btn btn-default  " type="button" disabled="">‹</button>
             <input autocomplete="new-text" class="form-control" formcontrolname="pageInput" type="text">
@@ -149,7 +140,6 @@
             <button class="btn btn-default  " type="button" disabled="">›</button>
             <button class="btn btn-default " type="button" disabled="">››</button>
           </div>
-          <div class="col-sm-3 col-md-3"></div>
           <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshCountries()">
         </ngb-pagination>
       
@@ -159,7 +149,8 @@
           <option [ngValue]="6">6 items per page</option>
         </select> -->
         </div>
-
+        
+      </div>
       </div>
 
     </div>

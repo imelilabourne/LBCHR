@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InquireService } from 'src/app/services/inquire.service';
 
 @Component({
   selector: 'app-inquire',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class InquireComponent implements OnInit {
   page = 1;
   pageSize = 4;
-  constructor() {
+  application: any;
+
+  constructor(private inquireService: InquireService) {
     this.refreshCountries();
   }
 
@@ -17,6 +20,9 @@ export class InquireComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.inquireService.getApplication().subscribe(data => {
+      this.application = data;
+    })
   }
 
 }

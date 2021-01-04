@@ -1,9 +1,6 @@
 /* Application Specific CSS */
 
-/*** Set font properties and other generic style ***/
-body, input, select, textarea, table, p,h1,h2,h3,h4,h5,h6{
-	font: 16px sans-serif; 
-	}
+
 body{background:#FFFFFF;}	
 
 h2{
@@ -480,10 +477,6 @@ legend img{margin:0 5px}
 	src:url('font/OpenSans-Bold.ttf')	
 	}
 
-body, input, select, textarea, table, h1,h2,h3,h4,h5,h6{
-	font-size:18px;
-	font-family: "opensans" !important;
-	}
 
 h1,h2,h3, label{
 	font-weight:normal;

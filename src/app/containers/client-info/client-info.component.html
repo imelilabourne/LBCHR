@@ -1,18 +1,27 @@
 <div>
-  <app-navbar></app-navbar>
   <div class="container-fluid main-view-mobile">
-    <div class="head-main">
+    <!-- <div class="head-main">
       <h1 class="title">PROCESS APPLICATION</h1>
+      <p><label>CLIENT NAME: </label> ELI LABOURNE</p>
     </div>
-    <hr />
+    <h1>CLIENT INFORMATION</h1> -->
 
+
+    <div class="head-outer">
+      <div class="d-flex justify-content-between head align-items-center">
+        <h1>PROCESS APPLICATION</h1>
+        <p><label>CLIENT NAME: </label> ELI LABOURNE</p>
+      </div>
+      <h1>CLIENT INFORMATION SUMMARY</h1>
+    </div>
+    <br>
     <form [formGroup]="form">
       <span class="text-inside-div">Personal Information</span>
       <div class="section-content">
         <div class="container-fluid">
           <div class="form-group">
-            <label class="control-label">Name of Customer</label>
-            <div class="row">
+            <label class="control-label mandatory">Name of Customer</label>
+            <div class="row customerName">
               <div class="col-sm-3">
                 <input
                   autocomplete="new-text"
@@ -44,7 +53,7 @@
               </div>
 
               <div class="col-sm-2">
-                <select class="form-control" formcontrolname="nameExt">
+                <select class="form-control mandatory" formcontrolname="nameExt">
                   <option value="">Name Suffix</option>
                   <option value="SR">SR</option>
                   <option value="JR">JR</option>
@@ -66,7 +75,7 @@
                   <div class="form-group">
                     <label class="control-label mandatory">Date of Birth</label>
                     <div>
-                      <!-- <datepicker  _nghost-c17="">
+                      <!-- <datepicker  >
                 <div class="input-group datepicer-icon "> -->
                       <input
                         autocomplete="new-text"
@@ -86,9 +95,9 @@
                   </div>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-md-3">
                   <div class="form-group">
-                    <label class="control-label mandatory">Nationality</label>
+                    <label class="control-label">Nationality</label>
                     <div>
                       <select
                         class="form-control"
@@ -105,7 +114,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-2">
+                <div class="col-md-2">
                   <div class="form-group">
                     <label class="control-label">Sex</label>
                     <div>
@@ -126,7 +135,7 @@
               <div class="row">
                 <div class="col-sm-3">
                   <div class="form-group">
-                    <label class="control-label mandatory"
+                    <label class="control-label"
                       >Place of Birth</label
                     >
                     <div>
@@ -141,7 +150,7 @@
                 </div>
                 <div class="col-sm-3 lbpgroup">
                   <div class="form-group">
-                    <label class="control-label mandatory">Civil Status</label>
+                    <label class="control-label">Civil Status</label>
                     <div>
                       <select
                         class="form-control"
@@ -182,7 +191,7 @@
                 <label class="control-label">Present Address</label>
                 <div class="row">
                   <div class="col-sm-4">
-                    <label class="control-label addressLabel mandatory"
+                    <label class="control-label addressLabel"
                       >No. / Street</label
                     >
                     <input
@@ -227,7 +236,7 @@
               <div class="form-group" style="display: block; opacity: 1">
                 <div class="row">
                   <div class="col-sm-4">
-                    <label class="control-label addressLabel mandatory"
+                    <label class="control-label addressLabel"
                       >Province</label
                     >
                     <input
@@ -252,7 +261,7 @@
 
                   <div class="col-sm-2">
                     <div class="form-group">
-                      <label class="control-label mandatory">Nationality</label>
+                      <label class="control-label">Nationality</label>
                       <div>
                         <select
                           class="form-control"
@@ -288,8 +297,8 @@
             <div class="marginBottom">
               <div>
                 <div class="checkbox">
-                  <label>
-                    <input formcontrolname="sameAddress" type="checkbox" />
+                  <label class="checkbox-inline">
+                    <input class="" formcontrolname="sameAddress" type="checkbox" />
                     Same as Present Address</label
                   >
                 </div>
@@ -302,7 +311,7 @@
             >
               <div>
                 <div class="col-sm-4">
-                  <label class="control-label addressLabel mandatory"
+                  <label class="control-label addressLabel"
                     >No. / Street</label
                   ><input
                     class="form-control"
@@ -383,7 +392,7 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label mandatory">Type of ID</label>
+                <label class="control-label">Type of ID</label>
                 <div>
                   <select
                     class="form-control"
@@ -409,7 +418,7 @@
             </div>
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label mandatory">ID Number </label>
+                <label class="control-label">ID Number </label>
                 <div class="input-group">
                   <input
                     autocomplete="new-text"
@@ -450,7 +459,7 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label mandatory">Occupation</label>
+                <label class="control-label">Occupation</label>
                 <div>
                   <select class="form-control" formcontrolname="occupation">
                     <option value="">Select Occupation</option>
@@ -488,7 +497,7 @@
           <div  class="row">
             <div  class="col-sm-4">
               <div  class="form-group">
-                <label  class="control-label mandatory"
+                <label  class="control-label"
                   >Primary Source of Funds</label
                 >
                 <div >
@@ -567,7 +576,7 @@
             </div>
             <div  class="col-sm-4">
               <div  class="form-group">
-                <label  class="control-label mandatory"
+                <label  class="control-label"
                   >Monthly Gross Income/Pension/Allowance</label
                 >
                 <div >
@@ -606,10 +615,10 @@
                   <div  class="input-group">
                     <div  class="input-group-addon">
                       <div  class="checkbox">
-                        <label 
+                        <label  class=""
                           ><input
                             
-                            class="naIND ng-untouched ng-pristine ng-valid"
+                            class="naIND ng-untouched "
                             formcontrolname="naTin"
                             type="checkbox"
                           />
@@ -619,7 +628,7 @@
                     </div>
                     <!----><!----><select
                       
-                      class="form-control ng-untouched ng-pristine ng-valid ng-star-inserted"
+                      class="form-control"
                       formcontrolname="tinReason"
                     >
                       <option  value="">

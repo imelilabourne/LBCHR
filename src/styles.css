@@ -113,46 +113,6 @@
   */
  
   
- h1 {
-     /* color: #FFF; */
-     font-size: 1.1em;
-     font-style: italic;
-     line-height: 15px;
-     margin: 0 !important;
-     padding: 0 !important;
- }
- 
- h2 {
-     font-size: 1em;
-     margin: 5px 0px 0px 0px;
-         /* color:#FFF; */
-         text-transform:uppercase;
-         letter-spacing:-1px;
-         background:none;
- }
- 
- h3 {
-     font-size: 1em;
-     margin: 0px;
-         /*font-family:Arial;*/
-         /* color:#fff; */
-         font-weight:none;
- }
- 
- h4 {
-     font-size: 1em;
-     margin: 1.33em 0;
- }
- 
- h5 {
-     font-size: 0.83em;
-     margin: 1.67em 0;
- }
- 
- h6 {
-     font-size: 0.67em;
-     margin: 2.33em 0;
- }
  
  /**
   * Address styling not present in IE 7/8/9, Safari 5, and Chrome.

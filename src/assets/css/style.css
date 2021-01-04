@@ -28,3 +28,67 @@ i{
 button{
     padding: 4px 10px;
 }
+
+
+.row{
+    display: flex;
+    /* padding: 0 50px; */
+}
+
+h1{
+    border-bottom: 1px solid #ccc;
+    color: #026b05;
+
+}
+
+.head{
+    padding: 20px 0;
+}
+
+.section-content:nth-child(1){
+    background: #f3f0d5;
+}
+
+.main{
+    min-width: 300px;
+}
+
+.button-section{
+    margin: 0 15px;
+}
+
+
+p{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+.form-group-container{
+    margin: 0 100px;
+}
+
+
+.page{
+    padding: 8px 0;
+}
+
+
+
+
+
+thead{
+    height: 10px;
+    line-height: 2px;
+    font-size: 11px;
+}
+
+.page > div> span, .page > div> button{
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.page> div > input{
+    width: 20px;
+    display: inline-block;
+}
