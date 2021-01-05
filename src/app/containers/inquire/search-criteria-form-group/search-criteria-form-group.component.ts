@@ -23,6 +23,8 @@ export class SearchCriteriaFormGroupComponent implements OnInit {
   }
 
   onSubmit() {
-    this.payLoad = JSON.stringify(this.form.getRawValue());
+    this.payLoad = this.form.getRawValue();
+    console.log(this.payLoad);
+    
   }
 }

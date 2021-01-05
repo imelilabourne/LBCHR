@@ -1,0 +1,25 @@
+
+.btn-search{
+    color: #fff;
+    background-color: #337ab7;
+    color: white;
+}
+
+.btn-clear{
+    background-color: rgb(255, 255, 255);
+    color: #06c;
+}
+
+.search-lbl{
+    text-align: end;
+    margin-top: 6px;
+}
+
+.form-btn{
+    border: none;
+    width: inherit;
+    margin-bottom: 6px;
+    height: 25px;
+    line-height: 12px;
+    font-size: 12px;
+}
