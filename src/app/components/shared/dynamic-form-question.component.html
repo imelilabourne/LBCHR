@@ -1,14 +1,23 @@
-<div [formGroup]="form">
-      <label class="search-lbl col-md-4 control-label" [attr.for]="question.key">{{question.label}}</label>
-    
-      <div [ngSwitch]="question.controlType">
-        <input class="col-md-8 form-control" *ngSwitchCase="'textbox'" [formControlName]="question.key"
-                [id]="question.key" [type]="question.type">
-    
-        <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
-          <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
-        </select>
-      </div>
 
-    <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+  <div class="container-fluid" [formGroup]="form">
+
+      <div class="row">
+
+        <div class=" col-md-4">
+        <label class="search-lbl
+          control-label" [attr.for]="question.key">{{question.label}}</label>
+        </div>
+        <div [ngSwitch]="question.controlType" class=" col-md-8">
+          <input class="form-control" *ngSwitchCase="'textbox'" [formControlName]="question.key"
+                  [id]="question.key" [type]="question.type">
+      
+          <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+            <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+          </select>
+        </div>
+
   </div>
+
+
+  <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+</div>
