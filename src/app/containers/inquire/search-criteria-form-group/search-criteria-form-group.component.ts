@@ -23,6 +23,9 @@ export class SearchCriteriaFormGroupComponent implements OnInit {
     this.form = this.qcs.toFormGroup(this.questions);    
   }
 
+  onClear(){
+    this.form.reset();
+  }
   onSubmit() {
     this.payLoad = this.form.getRawValue();
     console.log(this.payLoad);

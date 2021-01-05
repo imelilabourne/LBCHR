@@ -18,7 +18,7 @@
               <div class="col-md-2">
                 <button type="submit" [disabled]="!form.valid" class="btn form-btn btn-search"><i class="fa fa-search"></i>Search</button>
               
-                <button class="btn form-btn btn-clear">Clear</button>
+                <button (click)="onClear()" type="button" class="btn form-btn btn-clear">Clear</button>
               </div>
             </div>
         </div>

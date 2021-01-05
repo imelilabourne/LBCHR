@@ -9,9 +9,9 @@
         </div>
         <div [ngSwitch]="question.controlType" class=" col-md-8">
           <input class="form-control" *ngSwitchCase="'textbox'" [formControlName]="question.key"
-                  [id]="question.key" [type]="question.type">
+                  [id]="question.key" [type]="question.type" [placeholder]="question.placeholder">
       
-          <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+          <select class="form-control" [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
             <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
           </select>
         </div>
@@ -19,5 +19,5 @@
   </div>
 
 
-  <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+  <small class="errorMessage" *ngIf="!isValid">{{question.label}} is required</small>
 </div>

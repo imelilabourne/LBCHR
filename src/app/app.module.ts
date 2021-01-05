@@ -21,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { InquireMaintenanceComponent } from './containers/inquire/inquire-maintenance/inquire-maintenance.component';
 import { SearchCriteriaFormGroupComponent } from './containers/inquire/search-criteria-form-group/search-criteria-form-group.component';
 import { DynamicFormQuestionComponent } from './components/shared/dynamic-form-question.component';
+import { PersonalInformationFormGroupComponent } from './generic/personal-information-form-group/personal-information-form-group.component';
+import { InquireProcessApplicationComponent } from './containers/inquire/inquire-process-application/inquire-process-application.component';
+import { ValidIdFormGroupComponent } from './generic/valid-id-form-group/valid-id-form-group.component';
+import { FinancialInformationFormGroupComponent } from './generic/financial-information-form-group/financial-information-form-group.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +42,11 @@ import { DynamicFormQuestionComponent } from './components/shared/dynamic-form-q
     SidebarComponent,
     InquireMaintenanceComponent,
     SearchCriteriaFormGroupComponent,
-    DynamicFormQuestionComponent
+    DynamicFormQuestionComponent,
+    PersonalInformationFormGroupComponent,
+    InquireProcessApplicationComponent,
+    ValidIdFormGroupComponent,
+    FinancialInformationFormGroupComponent
   ],
   imports: [
     BrowserModule,
