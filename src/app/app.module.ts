@@ -19,7 +19,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LmpcClientinfoComponent } from './containers/lmpc-clientinfo/lmpc-clientinfo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InquireMaintenanceComponent } from './containers/inquire/inquire-maintenance/inquire-maintenance.component';
-import { SearchCriteriaFormGroupComponent } from './containers/inquire/search-criteria-form-group/search-criteria-form-group.component';
+import { SearchCriteriaFormGroupComponent } from './generic/search-criteria-form-group/search-criteria-form-group.component';
 import { DynamicFormQuestionComponent } from './components/shared/dynamic-form-question.component';
 import { PersonalInformationFormGroupComponent } from './generic/personal-information-form-group/personal-information-form-group.component';
 import { InquireProcessApplicationComponent } from './containers/inquire/inquire-process-application/inquire-process-application.component';

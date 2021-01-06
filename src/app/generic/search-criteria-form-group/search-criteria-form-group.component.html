@@ -1,6 +1,6 @@
 
 
-  <div class="col-md-12">
+  <div class="">
 
       <form (ngSubmit)="onSubmit()" [formGroup]="form">
         <div class="container-fluid">
@@ -8,9 +8,14 @@
         
             <div class="col-md-10" >
             <div style="border-right: 1px solid #ccc">
-              <div *ngFor="let question of questions" >
-                <app-question [question]="question" [form]="form"></app-question>
+              <div class="row">
+                <div *ngFor="let question of questions" >
+                    <div class="col-md-12">
+                        <app-question  [question]="question" [form]="form"></app-question>
+                    </div>
+                </div>
               </div>
+         
             </div>
             </div>
           

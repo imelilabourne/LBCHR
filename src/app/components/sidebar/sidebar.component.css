@@ -5,35 +5,40 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom,rgba(7,79,47,1) 0%,  rgba(7,79,47,1) 7%,rgba(7,79,47,1) 7%, #fec84c 7%, #fec84c 7.5%, rgba(11,128,11,1) 7.5%,rgba(11,128,11,1) 100%);
+  background: linear-gradient(to bottom,rgba(7,79,47,1) 0,  rgba(7,79,47,1) 32px,rgba(7,79,47,1) 32px, #fec84c 32px, #fec84c 35px, rgba(11,128,11,1) 35px,rgba(11,128,11,1) 100%);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   text-transform: uppercase;
+  box-shadow: rgba(7,79,47,1) 0 0 20px;
 }
 
 .sidenav a {
-  
   padding: 0px 6px 0px 20px;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 9px;
+  font-weight: bold;
   color: #fff;
   display: block;
   transition: 0.3s;
   line-height: 30px;
 }
 
+.sidenav a:nth-child(2){
+  margin-top: -24px;
+}
+
 .links{
-  border-bottom: 1px solid  #104810;
+  border-bottom:2px solid  #576857;
 }
 
 .sidenav a:hover {
-  color: #89a888;
+  color: hsl(59, 84%, 65%);
 }
 
 .sidenav .closebtn {
   position: absolute;
-  top: 10px;
+  top: 2px;
   right: 0px;
   margin-left: 50px;
   font-size: 16px;
@@ -45,7 +50,8 @@
 }
 
 span{
-    margin-top: -38px;
+    margin-top: -28px;
     margin-left: 8px;
     position: absolute;
+    font-size: 14px !important;
 }

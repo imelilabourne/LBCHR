@@ -9,17 +9,10 @@
             <div class="col-md-12" >
             <div>
               <div *ngFor="let question of personalInfo" >
-                <app-question [question]="question" [form]="form"></app-question>
+                <app-question  [question]="question" [form]="form"></app-question>
               </div>
             </div>
             </div>
-          
-              <!-- <button type="submit" [disabled]="!form.valid">Save</button> -->
-              <!-- <div class="col-md-2">
-                <button type="submit" [disabled]="!form.valid" class="btn form-btn btn-search"><i class="fa fa-search"></i>Search</button>
-              
-                <button (click)="onClear()" type="button" class="btn form-btn btn-clear">Clear</button>
-              </div> -->
             </div>
         </div>
      

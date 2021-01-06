@@ -1,6 +1,7 @@
 .header > ul{
     display: flex;
     align-items: center;
+    height: 22px;
 }
 
 
@@ -10,7 +11,7 @@ li, ul> li > *{
 }
 
 nav{
-    border-bottom: 4px rgb(228, 174, 25) solid;
+    border-bottom: 3px rgb(228, 174, 25) solid;
 
 }
 
