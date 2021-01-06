@@ -215,4 +215,81 @@ export class QuestionService {
 
     return of(personalInfo.sort((a, b) => a.order - b.order));
   }
+
+  getValidID(){
+    const validIdInfo: QuestionBase<string>[] = [
+      
+      new DropdownQuestion({
+        key: 'idType',
+        label: 'Type of ID',
+        placeholder:'Select a Valid ID',
+        options: [
+          {key: 'sin',  value: 'Single'},
+          {key: 'mar',  value: 'Married'},
+          {key: 'sep',  value: 'Separated'}
+        ],
+        order: 1
+      }),
+
+      new TextboxQuestion({
+        key: 'idNumber',
+        label: 'ID Number',
+        order: 2
+      }),
+    ]
+
+    return of(validIdInfo.sort((a, b) => a.order - b.order));
+  }
+  getFinancialInfo(){
+    const financialInfo: QuestionBase<string>[] = [
+      new DropdownQuestion({
+        key: 'occupation',
+        label: 'Occupation',
+        placeholder:'Select Occupation',
+        options: [
+          {key: 'Emp',  value: 'Employed'},
+          {key: 'sEmp',  value: 'Self-Employed'},
+          {key: 'ofw',  value: 'OFW / Overseas Filipino'}
+        ],
+        order: 1
+      }),
+
+      new DropdownQuestion({
+        key: 'fundSource',
+        label: 'Primary Source of Funds',
+        placeholder:'Select Source of Fund',
+        options: [
+          {key: 'sal',  value: 'Salary'},
+          {key: 'int',  value: 'Interest'},
+          {key: 'bus',  value: 'Business'}
+        ],
+        order: 2
+      }),
+
+      new DropdownQuestion({
+        key: 'amountRange',
+        label: 'Monthly Gross Income/Pension/Allowance',
+        placeholder:'Select Amount Range',
+        options: [
+          {key: 's',  value: 'Php 30,000 & Below'},
+          {key: 'm',  value: 'Php 30,000.01  - Php 50,000'},
+        ],
+        order: 3
+      }),
+
+      new DropdownQuestion({
+        key: 'tinNumber',
+        label: 'Tax Identification Number (TIN)',
+        placeholder:'Select Occupation',
+        options: [
+          {key: 'far',  value: 'FARMER/FISHER'},
+          {key: 'gen',  value: 'GENERAL SERVICES'},
+          {key: 'min',  value: 'MINOR'}
+        ],
+        order: 4
+      }),
+
+    ]
+    return of(financialInfo.sort((a, b) => a.order - b.order));
+  }
 }

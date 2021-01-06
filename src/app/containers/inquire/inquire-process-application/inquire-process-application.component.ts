@@ -11,8 +11,13 @@ import { QuestionService } from 'src/app/services/question.service';
 })
 export class InquireProcessApplicationComponent implements OnInit {
   personalInfo$ :  Observable<QuestionBase<any>[]>;
+  validIdInfo$: Observable<QuestionBase<any>[]>;
+  financialInfo$: Observable<QuestionBase<any>[]>;
+
   constructor(service: QuestionService) { 
     this.personalInfo$ = service.getPersonalInfo();
+    this.validIdInfo$ = service.getValidID();
+    this.financialInfo$ = service.getFinancialInfo();
   }
 
   ngOnInit() {
