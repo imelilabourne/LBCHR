@@ -11,7 +11,7 @@
 }
 
 .search-lbl{
-    text-align: end;
+    /* text-align: end; */
     margin-top: 6px;
 }
 
@@ -22,4 +22,9 @@
     height: 25px;
     line-height: 12px;
     font-size: 12px;
+}
+
+.fields-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
 }

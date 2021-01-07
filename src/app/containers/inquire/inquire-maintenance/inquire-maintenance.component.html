@@ -1,13 +1,13 @@
 <div class="section-content">
   <h2>Search Criteria</h2>
-    <app-search-criteria-form-group [questions]="questions$ | async"></app-search-criteria-form-group>
+    <app-search-criteria-form-group style="text-align: end;" [questions]="questions$ | async"></app-search-criteria-form-group>
 
 </div>
 
 <div class="section-content">
   <div class="">
     <!-- second container-div -->
-    <a routerLink="../inquire-summary" style="float: right; font-size: 12px; margin-bottom: 10px"><i
+    <a (click)="onInquire()" style="float: right; font-size: 12px; margin-bottom: 10px"><i
         class="fa fa-wpforms"></i>Inquire</a>
     <div class=" table-responsive" style="width: 100%">
 
@@ -26,8 +26,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let app of tableValArray">
-            <td><input type="radio"></td>
+          <tr (click)="onRowClick($event, app)"  *ngFor="let app of tableValArray">
+            <td style="text-align: center;"><input name="app.requestNo" (change) = "updateRowClick($event, app)" [value]="app" type="radio"></td>
             <td>{{app.requestNo}}</td>
             <td>{{ app.projectName }}</td>
             <td>{{ app.rcCode }}</td>

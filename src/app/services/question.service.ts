@@ -19,26 +19,40 @@ export class QuestionService {
         disabled: true,
         order: 1
       }),
+      
 
       new TextboxQuestion({
         key: 'name',
         label: 'Name',
-        disabled: true,
-        order: 2
+        order: 3
       }),
 
       new TextboxQuestion({
         key: 'emailAddress',
         label: 'Email Address',
         type: 'email',
-        order: 3
+        order: 4
       }),
 
       new TextboxQuestion({
         key: 'mobileNumber',
         label: 'Mobile No.',
         type: 'number',
-        order: 4
+        order: 2
+      }),
+
+      new TextboxQuestion({
+        key: 'dateFrom',
+        label: 'Date From',
+        type: 'date',
+        order: 5
+      }),
+
+      new TextboxQuestion({
+        key: 'dateTo',
+        label: 'Date To',
+        type: 'date',
+        order: 6
       })
     ];
 
