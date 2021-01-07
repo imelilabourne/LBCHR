@@ -5,6 +5,7 @@ export class QuestionBase<T> {
     required: boolean;
     placeholder: any;
     order: number;
+    disabled: boolean;
     controlType: string;
     type: string;
     options: {key: string, value: string}[];
@@ -16,6 +17,7 @@ export class QuestionBase<T> {
         required?: boolean;
         placeholder?: any;
         order?: number;
+        disabled?: boolean;
         controlType?: string;
         type?: string;
         options?: {key: string, value: string}[];
@@ -26,6 +28,7 @@ export class QuestionBase<T> {
       this.required = !!options.required;
       this.placeholder = options.placeholder || '';
       this.order = options.order === undefined ? 1 : options.order;
+      this.disabled = options.disabled || false;
       this.controlType = options.controlType || '';
       this.type = options.type || '';
       this.options = options.options || [];

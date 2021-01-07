@@ -16,12 +16,14 @@ export class QuestionService {
         label: 'Application No.',
         value: 'PA00000000001',
         required: true,
+        disabled: true,
         order: 1
       }),
 
       new TextboxQuestion({
         key: 'name',
         label: 'Name',
+        disabled: true,
         order: 2
       }),
 
