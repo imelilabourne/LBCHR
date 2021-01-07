@@ -1,0 +1,10 @@
+.fields-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+span{
+    font-size: 12px;
+    color: #928e6a;
+}

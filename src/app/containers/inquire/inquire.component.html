@@ -4,6 +4,8 @@
     <div class="head-main">
       <h1>INQUIRE APPLICATION</h1>
     </div>
+
+    <!-- WITHOUT DYNAMIC FORM IMPLEMENTATION -->
     <form>
       <div class="section-content">
         <h2>Search Criteria</h2>
@@ -64,6 +66,7 @@
 
 
     </form>
+    <!-- //WITHOUT DYNAMIC FORM IMPLEMENTATION -->
   </div>
 
 <app-inquire-maintenance></app-inquire-maintenance>
@@ -102,30 +105,6 @@
               <td>11/25/2020 09:23:11</td>
             </tr>
           </tbody>
-
-          <!--
-        <tfoot class="">
-          <tr id="tbl-paging">
-            <td colspan="8">
-              <div class="col-sm-3">
-                <span class="">Page 1 of 0 </span>
-                <span class="">Total No. of Records: </span>
-              </div>
-              
-              <div class="col-sm-6 ">
-                <button class="btn btn-default " type="button" disabled="">‹‹</button>
-                <button class="btn btn-default  " type="button" disabled="">‹</button>
-                <input autocomplete="new-text" class="form-control" formcontrolname="pageInput" type="text">
-                <button class="btn btn-default " type="button" disabled="">Go to Page</button>
-                <button class="btn btn-default  " type="button" disabled="">›</button>
-                <button class="btn btn-default " type="button" disabled="">
-                  ››
-                </button>
-              </div><div class="col-sm-3"></div>
-            </td>
-          </tr>
-        </tfoot>
-      -->
         </table>
         <div class="container">
   
@@ -143,14 +122,6 @@
             <button class="btn btn-default  " type="button" disabled="">›</button>
             <button class="btn btn-default " type="button" disabled="">››</button>
           </div>
-          <!-- <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshCountries()">
-        </ngb-pagination>
-      
-        <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
-          <option [ngValue]="2">2 items per page</option>
-          <option [ngValue]="4">4 items per page</option>
-          <option [ngValue]="6">6 items per page</option>
-        </select> -->
         </div>
         
       </div>
