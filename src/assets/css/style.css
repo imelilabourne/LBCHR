@@ -3,11 +3,6 @@ i{
 }
 
 
-.head-main{
-    padding: 20px 0;
-}
-
-
 .text-inside-div{
     position: absolute;
     margin: -10px 0 0 12px;    
@@ -35,14 +30,14 @@ button{
     /* padding: 0 50px; */
 }
 
-h1{
+.head{
     border-bottom: 1px solid #ccc;
     color: #026b05;
-
+    
 }
 
 .head{
-    padding: 20px 0;
+    padding: 0;
 }
 
 .section-content:nth-child(1){
@@ -78,9 +73,15 @@ p{
     min-width: 180px;
 }
 
+input{
+    caret-color: #4fa570;
+}
+
 .label{
     min-width: 100px;
+    font-weight: 500 !important;
 }
+
 
 
 thead{

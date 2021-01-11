@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Observable } from 'rxjs';
 import { QuestionBase } from 'src/app/components/shared/question-base';
 import { QuestionService } from 'src/app/services/question.service';
 import { RequestService } from 'src/app/services/request.service';
-
+import { WarningErrorComponent } from 'src/app/components/shared/modals/warning-error/warning-error.component';
 @Component({
   selector: 'app-inquire-maintenance',
   templateUrl: './inquire-maintenance.component.html',
   styleUrls: ['./inquire-maintenance.component.css'],
-  providers:  [QuestionService]
+  providers:  [QuestionService, BsModalRef, BsModalService]
 })
 export class InquireMaintenanceComponent implements OnInit {
 
@@ -17,6 +18,9 @@ export class InquireMaintenanceComponent implements OnInit {
   tableValues;
   tableValArray = [];
   selectedRequest;
+  modalRef: BsModalRef;
+
+  @ViewChild('warningError') warningError:WarningErrorComponent;
   constructor(service: QuestionService, 
     private reqService: RequestService,
     private router: Router) {
@@ -57,8 +61,8 @@ export class InquireMaintenanceComponent implements OnInit {
       this.router.navigateByUrl("inquire-summary");
     }
     else{
-      alert("Please Select Request");
-      
+      // alert("Please Select Request");
+      this.warningError.openModal();
     }
     
   }

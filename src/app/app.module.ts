@@ -10,7 +10,7 @@ import { ClientInfoComponent } from './containers/client-info/client-info.compon
 import { FormComponent } from './components/form/form.component';
 import { InquireSummaryComponent } from './containers/inquire-application-summary/inquire-application-summary.component';
 import { CustomerDetailSummaryComponent } from './containers/customer-detail-summary/customer-detail-summary.component';
-import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './containers/login/login.component';
 import { CreateLMPCComponent } from './containers/create-lmpc/create-lmpc.component';
 import { ForgotpasswordComponent } from './containers/forgotpassword/forgotpassword.component';
@@ -25,6 +25,9 @@ import { PersonalInformationFormGroupComponent } from './generic/personal-inform
 import { InquireProcessApplicationComponent } from './containers/inquire/inquire-process-application/inquire-process-application.component';
 import { ValidIdFormGroupComponent } from './generic/valid-id-form-group/valid-id-form-group.component';
 import { FinancialInformationFormGroupComponent } from './generic/financial-information-form-group/financial-information-form-group.component';
+import { WarningErrorComponent } from './components/shared/modals/warning-error/warning-error.component';
+// import { ModalModule } from 'ngx-bootstrap';
+import { ModalModule} from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,18 +49,21 @@ import { FinancialInformationFormGroupComponent } from './generic/financial-info
     PersonalInformationFormGroupComponent,
     InquireProcessApplicationComponent,
     ValidIdFormGroupComponent,
-    FinancialInformationFormGroupComponent
+    FinancialInformationFormGroupComponent,
+    WarningErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingRoutingModule,
     FormsModule,
+    ModalModule.forRoot(),
     ReactiveFormsModule,
     NgbModule.forRoot(),
     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [ WarningErrorComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

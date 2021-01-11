@@ -64,7 +64,6 @@ export class QuestionService {
 
       new DropdownQuestion({
         key: 'nameSuffix',
-        label: 'Name Suffix',
         options: [
           {key: 'sr',  value: 'SR'},
           {key: 'jr',  value: 'JR'},
@@ -87,6 +86,7 @@ export class QuestionService {
       }),
 
       new TextboxQuestion({
+        label: "",
         key: 'middleName',
         placeholder: 'Middle Name',
         order: 2
