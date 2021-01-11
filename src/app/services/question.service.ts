@@ -102,6 +102,7 @@ export class QuestionService {
         key: 'birthDate',
         label: 'Date of Birth',
         placeholder: 'MM/DD/YYYY',
+        type: "date",
         order: 5
       }),
 

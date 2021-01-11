@@ -6,6 +6,7 @@ import { QuestionBase } from 'src/app/components/shared/question-base';
 import { QuestionService } from 'src/app/services/question.service';
 import { RequestService } from 'src/app/services/request.service';
 import { WarningErrorComponent } from 'src/app/components/shared/modals/warning-error/warning-error.component';
+import { InquireService } from 'src/app/services/inquire.service';
 @Component({
   selector: 'app-inquire-maintenance',
   templateUrl: './inquire-maintenance.component.html',
@@ -23,6 +24,7 @@ export class InquireMaintenanceComponent implements OnInit {
   @ViewChild('warningError') warningError:WarningErrorComponent;
   constructor(service: QuestionService, 
     private reqService: RequestService,
+    private inquireService: InquireService, 
     private router: Router) {
       this.questions$ = service.getQuestions();
   }
@@ -31,17 +33,25 @@ export class InquireMaintenanceComponent implements OnInit {
       this.reqService.getRequest().subscribe(data => {
       this.tableValues  = data;
       this.tableValArray =  this.tableValues.result;
-    })
+    },  (error => this.inquireService.getApplication().subscribe(data => {
+      //when 1st request fails
+       
+      this.tableValArray.push(data[0]);
+      this.tableValArray.push(data[1]);
+      this.tableValArray.push(data[2]);
+    }
+    )))
   }
 
   onRowClick(event, app){
-    //check row
+    //uncheck row
     if(event.target.parentElement.className ===  'active-row'){
       event.target.parentElement.classList.remove('active-row');
       this.selectedRequest = "";
     }
-    //uncheck selected row
+    //check selected row
     else{  
+      document.querySelectorAll(".active-row").forEach(item => item.classList.remove('active-row'))
       event.target.parentElement.classList.add('active-row');
       this.selectedRequest = app.requestNo;
     }
@@ -53,6 +63,9 @@ export class InquireMaintenanceComponent implements OnInit {
       console.log("empty");
       
     }
+  }
+
+  onRowClickUpdate(event, app){
   }
 
   onInquire(){

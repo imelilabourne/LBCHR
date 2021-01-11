@@ -28,7 +28,7 @@
         </thead>
         <tbody>
           <tr (click)="onRowClick($event, app)"  *ngFor="let app of tableValArray">
-            <td style="text-align: center;"><input name="app.requestNo" (change) = "updateRowClick($event, app)" [value]="app" type="radio"></td>
+            <td style="text-align: center;"><input name="app.requestNo" [value]="app" type="radio"></td>
             <td>{{app.requestNo}}</td>
             <td>{{ app.projectName }}</td>
             <td>{{ app.rcCode }}</td>

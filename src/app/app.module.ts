@@ -28,6 +28,7 @@ import { FinancialInformationFormGroupComponent } from './generic/financial-info
 import { WarningErrorComponent } from './components/shared/modals/warning-error/warning-error.component';
 // import { ModalModule } from 'ngx-bootstrap';
 import { ModalModule} from 'ngx-bootstrap/modal';
+import { ConfirmatinModalComponent } from './components/shared/modals/confirmatin-modal/confirmatin-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { ModalModule} from 'ngx-bootstrap/modal';
     InquireProcessApplicationComponent,
     ValidIdFormGroupComponent,
     FinancialInformationFormGroupComponent,
-    WarningErrorComponent
+    WarningErrorComponent,
+    ConfirmatinModalComponent
   ],
   imports: [
     BrowserModule,

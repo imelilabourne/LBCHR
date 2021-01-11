@@ -8,6 +8,8 @@
               <div *ngFor="let question of validIdInfo" >
                 <app-question [question]="question" [form]="form"></app-question>
               </div>
+              <button style="width: 50px; height: 30px;" type="button" (click)="addContact()"><i class="fa fa-plus"></i></button>
+
             </div>
         </div>
       </form>

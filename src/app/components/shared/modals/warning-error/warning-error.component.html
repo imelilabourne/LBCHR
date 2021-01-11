@@ -1,12 +1,17 @@
 
 <ng-template #warningError>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Warning Error</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
+  <div class="modal-wrapper">
+      <div> <i class="fa fa-times" style="color: red; font-size: 60px;"></i></div>
   <div class="modal-body">
-    Please Select a Request
+    <h4 style="border-bottom: 1px solid;" class="modal-title">ERROR</h4>
+
+    Please select an application
   </div>
+  </div>
+  
+  <div class="modal-footer d-flex justify-content-center" >
+    <button type="button"  aria-label="Close" (click)="modalRef.hide()">OK</button>
+  </div>
+  
+
 </ng-template>

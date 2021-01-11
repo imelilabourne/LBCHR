@@ -83,6 +83,12 @@ input{
 }
 
 
+@media only screen and  (max-width: 500px){
+    .label{
+        text-align: start;
+    }
+}
+
 
 thead{
     height: 10px;
@@ -99,3 +105,4 @@ thead{
     width: 20px;
     display: inline-block;
 }
+
