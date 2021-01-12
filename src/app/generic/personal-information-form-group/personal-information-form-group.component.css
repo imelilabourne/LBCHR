@@ -1,8 +1,8 @@
 .fields-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
-
 
 @media only screen and (max-width: 500px){
     .fields-wrapper{
@@ -10,7 +10,21 @@
     }
 }
 
+.foot0, .foot1, .foot2, .foot3 {
+    flex-basis: 25%;
+}
 
+.foot4, .foot5, .foot6, .foot7, .foot8, .foot9, .foot10, .foot11, .foot12{
+    flex-basis: 33.33%;
+}
+
+.foot13, .foot14, .foot15, .foot16{
+    flex-basis: 25%;
+}
+
+.foot17, .foot18{
+    flex-basis: 25%;
+}
 
 span{
     font-size: 12px;

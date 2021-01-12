@@ -107,7 +107,7 @@ export class QuestionService {
       }),
 
       new DropdownQuestion({
-        key: 'nationality',
+        key: 'nationality1',
         placeholder: 'Select Country',
         label: 'Nationality',
         options: [
@@ -183,7 +183,7 @@ export class QuestionService {
 
       new TextboxQuestion({
         key: 'province',
-        label: 'No./Street',
+        label: 'Province',
         placeholder: 'Province',
         order: 13
       }),
@@ -196,7 +196,7 @@ export class QuestionService {
       }),
 
       new TextboxQuestion({
-        key: 'nationality',
+        key: 'nationality2',
         label: 'Nationality',
         placeholder: 'Select Country',
         order: 15
@@ -213,7 +213,6 @@ export class QuestionService {
         key: 'mobileNum',
         label: 'Primary Mobile No.',
         placeholder: 'Number',
-        type: 'number',
         order: 17
       }),
       
@@ -221,7 +220,6 @@ export class QuestionService {
         key: 'emailAddress',
         label: 'Email Address',
         placeholder: 'myname@example.com',
-        type: 'email',
         order: 18
       }),
 

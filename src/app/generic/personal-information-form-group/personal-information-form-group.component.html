@@ -1,19 +1,19 @@
-  <span class="text-inside-div">Personal Information</span>
-  <div class="section-content">
-    <div class="col-md-12">
+<span class="text-inside-div">Personal Information</span>
+<div class="section-content">
+  <div class="col-md-12">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <div class="fields-wrapper">
+        <div
+          class="foot{{ i }}"
+          *ngFor="let question of personalInfo; let i = index"
+        >
+          <div>
+            <app-question [question]="question" [form]="form"></app-question>
+          </div>
 
-      <form (ngSubmit)="onSubmit()" [formGroup]="form">
-        <div class="container-fluid">
-              <div class="fields-wrapper">
-                <div *ngFor="let question of personalInfo" >
-                  <app-question class="" [question]="question" [form]="form"></app-question>
-                  <br>
-                </div>
-              </div>
-          
+          <br />
         </div>
-      </form>
-    </div>  
-  </div> 
-
- 
+      </div>
+    </form>
+  </div>
+</div>

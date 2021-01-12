@@ -14,11 +14,30 @@ export class PersonalInformationFormGroupComponent implements OnInit {
   @Input() personalInfo: QuestionBase<string>[] = [];
   form: FormGroup;
   payLoad = '';
-
+  selectedRequest;
   constructor(private qcs: QuestionControlService) { }
 
   ngOnInit() {
-    this.form = this.qcs.toFormGroup(this.personalInfo);    
+    this.form = this.qcs.toFormGroup(this.personalInfo);
+    this.selectedRequest = JSON.parse(localStorage.getItem("selectedRequest"));
+
+    this.form.patchValue(
+      { 
+        customerName:  this.selectedRequest.firstName,
+        middleName:  this.selectedRequest.middleName,
+        lastName: this.selectedRequest.lastName,
+        birthDate: this.selectedRequest.birthDate,
+        nationality1: this.selectedRequest.nationality,
+        sex: this.selectedRequest.sex,
+        birthPlace: this.selectedRequest.birthPlace,
+        civilStatus: this.selectedRequest.civilStatus,
+        motherName: this.selectedRequest.motherName,
+        mobileNum: this.selectedRequest.mobileNum,
+        emailAddress: this.selectedRequest.email
+      }
+    );
+     
+
   }
 
 }

@@ -1,8 +1,8 @@
 <div id="mySidenav" class="sidenav" *ngIf="isClicked">
   <a href="javascript:void(0)" (click)="toggle()" class="closebtn" ><i class="fa fa-thumb-tack"></i></a>
-  <a class="links" routerLink="../forgotPassword">Change Password</a>
-  <a class="links" routerLink="../corporateAcctInit">Create LMPC</a>
-  <a class="links" routerLink="../inquire">Inquire Application</a>
+  <a class="links" (click)="toggle()" routerLink="../forgotPassword">Change Password</a>
+  <a class="links" (click)="toggle()" routerLink="../corporateAcctInit">Create LMPC</a>
+  <a class="links" (click)="toggle()" routerLink="../inquire">Inquire Application</a>
 </div>
 
 

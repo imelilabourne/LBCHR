@@ -3,14 +3,11 @@
   <div class="col-md-12">
 
     <form (ngSubmit)="onSubmit()" [formGroup]="form">
-      <div class="container-fluid">
           <div class="fields-wrapper">
-            <div *ngFor="let question of financialInfo" >
-              <app-question [question]="question" [form]="form"></app-question> <br>
+            <div class="foot{{ i }}" *ngFor="let question of financialInfo;  let i = index" >
+              <app-question [question]="question" [form]="form"></app-question><br>
             </div>
           </div>
-      </div>
-   
     </form>
   </div>  
 </div> 

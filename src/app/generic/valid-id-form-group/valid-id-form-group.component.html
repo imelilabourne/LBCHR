@@ -3,15 +3,12 @@
     <div class="col-md-12">
 
       <form (ngSubmit)="onSubmit()" [formGroup]="form">
-        <div class="container-fluid">
             <div class="fields-wrapper">
               <div *ngFor="let question of validIdInfo" >
                 <app-question [question]="question" [form]="form"></app-question>
               </div>
               <button style="width: 50px; height: 30px;" type="button" (click)="addContact()"><i class="fa fa-plus"></i></button>
-
             </div>
-        </div>
       </form>
     </div>
   </div>

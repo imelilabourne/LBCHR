@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionBase } from 'src/app/components/shared/question-base';
 import { InquireService } from 'src/app/services/inquire.service';
-import { RequestService } from 'src/app/services/request.service';
-
 @Component({
   selector: 'app-inquire-summary',
   templateUrl: './inquire-application-summary.component.html',
