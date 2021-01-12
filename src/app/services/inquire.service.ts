@@ -12,6 +12,10 @@ export class InquireService {
   ) { }
 
   getApplication(){
-    return this.http.get('../../database/application.json');
+    return this.http.get('http://localhost:3000/request');
+  }
+
+  getRequest(requestNo){
+    return this.http.get(`http://localhost:3000/request?requestNo=${requestNo}`);
   }
 }

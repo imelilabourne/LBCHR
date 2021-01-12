@@ -30,6 +30,7 @@ p{
 
 p, h1{
     margin: 4px 0;
+    text-transform: uppercase;
 }
 
 

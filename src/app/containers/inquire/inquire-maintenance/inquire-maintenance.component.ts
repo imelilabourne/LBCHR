@@ -17,7 +17,7 @@ export class InquireMaintenanceComponent implements OnInit {
 
   questions$: Observable<QuestionBase<any>[]>;
   tableValues;
-  tableValArray = [];
+  tableValArray : any;
   selectedRequest;
   modalRef: BsModalRef;
 
@@ -33,14 +33,17 @@ export class InquireMaintenanceComponent implements OnInit {
       this.reqService.getRequest().subscribe(data => {
       this.tableValues  = data;
       this.tableValArray =  this.tableValues.result;
+      console.log(data);
+      
     },  (error => this.inquireService.getApplication().subscribe(data => {
       //when 1st request fails
+        this.tableValArray = data;
+      })
        
-      this.tableValArray.push(data[0]);
-      this.tableValArray.push(data[1]);
-      this.tableValArray.push(data[2]);
-    }
-    )))
+      // this.tableValArray.push(data[0]);
+      // this.tableValArray.push(data[1]);
+      // this.tableValArray.push(data[2])
+    ))
   }
 
   onRowClick(event, app){
@@ -51,7 +54,8 @@ export class InquireMaintenanceComponent implements OnInit {
     }
     //check selected row
     else{  
-      document.querySelectorAll(".active-row").forEach(item => item.classList.remove('active-row'))
+      const actiiveRows  =  Array.from(document.querySelectorAll(".active-row"));
+      actiiveRows.forEach(item => item.classList.remove('active-row'))
       event.target.parentElement.classList.add('active-row');
       this.selectedRequest = app.requestNo;
     }

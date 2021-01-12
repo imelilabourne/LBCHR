@@ -1,9 +1,26 @@
-[
+{
+    "request": [
         {
             "requestNo": 1,
             "projectName": "Robert Santiago",
             "rcCode": "09959241298",
-            "city" : "email@gmail.com"
+            "city" : "email@gmail.com",
+            
+
+            "firstName": "Robert",
+            "lastName": "Santiago",
+            "middleName": "Perez",
+            "birthday": "07/17/1998",
+            "nationality": "filipino",
+            "sex": "female",
+            "birthplace": "batangas",
+            "civilStatus": "single",
+            "motherName": "Angela Perez",
+            "presentAddress": "quezon city",
+            "permanentAddress": "quezon city",
+            "mobileNum": "09959143409",
+            "email": "elilabourne.detorres@gmail.com"
+            
         },
         {
             "requestNo": 2,
@@ -17,4 +34,5 @@
             "rcCode": "09439241298",
             "city" : "juan_delacruz00@gmail.com"
         }
-]
+    ]
+}

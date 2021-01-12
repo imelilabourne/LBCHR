@@ -21,7 +21,7 @@
               <label class="control-label">Name of Customer</label>
 
               <div>
-                <p class="">FELMER EUSEBIO</p>
+                <p class="">{{selectedRequest?.firstName}} {{selectedRequest?.lastName}}</p>
               </div>
             </div>
           </div>
@@ -33,21 +33,21 @@
           <div class="col-sm-4">
             <label class="control-label">Date of Birth</label>
             <div>
-              <p class="">JULY 17, 1998</p>
+              <p class="">{{selectedRequest?.birthday | date}}</p>
             </div>
           </div>
 
           <div class="col-sm-4">
             <label class="control-label">Nationality</label>
             <div>
-              <p class="">FILIPINO</p>
+              <p class="">{{ selectedRequest?.nationality }}</p>
             </div>
           </div>
 
           <div class="col-sm-4">
             <label class="control-label">Sex</label>
             <div>
-              <p class="">FEMALE</p>
+              <p class="">{{ selectedRequest?.sex }}</p>
             </div>
           </div>
         </div>
@@ -58,21 +58,21 @@
           <div class="col-sm-4">
             <label class="control-label">Place of Birth</label>
             <div>
-              <p class="">BATANGAS</p>
+              <p class="">{{ selectedRequest?.birthplace }}</p>
             </div>
           </div>
 
           <div class="col-sm-4">
             <label class="control-label">CIVIL STATUS</label>
             <div>
-              <p class="">SINGLE</p>
+              <p class="">{{selectedRequest?.civilStatus}}</p>
             </div>
           </div>
 
           <div class="col-sm-4">
             <label class="control-label">Mother's Maiden Name</label>
             <div>
-              <p class="">DG</p>
+              <p class="">{{selectedRequest?.motherName}}</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@
             <div class="form-group">
               <label class="control-label">Present Address</label>
               <div>
-                <p class="">QUEZON CITY</p>
+                <p class="">{{selectedRequest?.presentAddress}}</p>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@
             <div class="form-group">
               <label class="control-label">Permanent Address</label>
               <div>
-                <p class="">QUEZON CITY</p>
+                <p class="">{{selectedRequest?.permanentAddress}}</p>
               </div>
             </div>
           </div>
@@ -108,14 +108,14 @@
           <div class="col-sm-4">
             <label class="control-label">Mobile No.</label>
             <div>
-              <p class="">09959143486</p>
+              <p class="">{{selectedRequest?.mobileNum}}</p>
             </div>
           </div>
 
           <div class="col-sm-4">
             <label class="control-label">E-Mail Address</label>
             <div>
-              <p class="">elilabourne.detorres@gmail.com</p>
+              <p class="">{{selectedRequest?.email}}</p>
             </div>
           </div>
         </div>
