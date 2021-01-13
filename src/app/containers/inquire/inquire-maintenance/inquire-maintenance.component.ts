@@ -20,6 +20,7 @@ export class InquireMaintenanceComponent implements OnInit {
   tableValArray : any;
   selectedRequest;
   modalRef: BsModalRef;
+  isChecked: boolean = false;
 
   @ViewChild('warningError') warningError:WarningErrorComponent;
   constructor(service: QuestionService, 
@@ -41,25 +42,21 @@ export class InquireMaintenanceComponent implements OnInit {
   }
 
   onRowClick(event, app){
+    const activeRows  =  Array.from(document.querySelectorAll(".active-row"));
+
     //uncheck row
     if(event.target.parentElement.className ===  'active-row'){
       event.target.parentElement.classList.remove('active-row');
+      activeRows.forEach(item => item.firstElementChild.firstElementChild.removeAttribute('checked'));
       this.selectedRequest = "";
     }
     //check selected row
     else{  
-      const actiiveRows  =  Array.from(document.querySelectorAll(".active-row"));
-      actiiveRows.forEach(item => item.classList.remove('active-row'))
+      activeRows.forEach(item => item.firstElementChild.firstElementChild.removeAttribute('checked'));
+      activeRows.forEach(item => item.classList.remove('active-row'))
       event.target.parentElement.classList.add('active-row');
+      event.target.parentElement.firstChild.firstChild.setAttribute('checked', true);
       this.selectedRequest = app.requestNo;
-    }
-
-    if(this.selectedRequest){
-      console.log("not empty");
-    }
-    else{
-      console.log("empty");
-      
     }
   }
 
