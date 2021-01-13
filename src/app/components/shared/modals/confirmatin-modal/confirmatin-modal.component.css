@@ -1,0 +1,23 @@
+.modal-wrapper{
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    grid-row: 1fr;
+    align-items: center;
+}
+
+i{
+    margin-left: 20px;
+    border: solid gray;
+    width: 80px;
+    text-align: center;
+}
+
+button{
+    width: 100px;
+    border:  rgb(201, 201, 201) solid;
+    color: rgb(111, 170, 219);
+}
+
+.modal-footer{
+    background-color: rgb(238, 238, 238);
+}

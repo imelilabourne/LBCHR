@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { WarningErrorComponent } from 'src/app/components/shared/modals/warning-error/warning-error.component';
 
 @Component({
   selector: 'app-customer-detail-summary',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-detail-summary.component.css']
 })
 export class CustomerDetailSummaryComponent implements OnInit {
+  @ViewChild('warningError') warningError:WarningErrorComponent;
 
   constructor() { }
 
@@ -13,6 +15,6 @@ export class CustomerDetailSummaryComponent implements OnInit {
   }
 
   alertbox(){
-    alert("Are you sure you want to submit changes?")
+    this.warningError.openModal();
   }
 }

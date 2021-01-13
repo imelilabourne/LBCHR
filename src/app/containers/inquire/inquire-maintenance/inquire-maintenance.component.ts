@@ -11,7 +11,7 @@ import { InquireService } from 'src/app/services/inquire.service';
   selector: 'app-inquire-maintenance',
   templateUrl: './inquire-maintenance.component.html',
   styleUrls: ['./inquire-maintenance.component.css'],
-  providers:  [QuestionService, BsModalRef, BsModalService]
+  providers:  [QuestionService]
 })
 export class InquireMaintenanceComponent implements OnInit {
 

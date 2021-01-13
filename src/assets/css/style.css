@@ -108,6 +108,7 @@ thead{
 
 .bold{
     font-weight: bold !important;
+    margin-bottom: 0;
 }
 
 .errorMessage{

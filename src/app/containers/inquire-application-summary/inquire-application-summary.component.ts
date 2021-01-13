@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { QuestionBase } from 'src/app/components/shared/question-base';
 import { InquireService } from 'src/app/services/inquire.service';
@@ -7,9 +8,9 @@ import { InquireService } from 'src/app/services/inquire.service';
   styleUrls: ['./inquire-application-summary.component.css']
 })
 export class InquireSummaryComponent implements OnInit {
-
+  showContent;
   selectedRequest : QuestionBase<string>;
-  constructor(private service: InquireService) { }
+  constructor(private service: InquireService, private location: Location) { }
 
   ngOnInit() {
   this.service.getRequest(1).subscribe(data => {
@@ -22,6 +23,7 @@ export class InquireSummaryComponent implements OnInit {
     )
 
 
+  this.showContent  = this.location.path() === '/inquire-summary'; 
     
   }
 

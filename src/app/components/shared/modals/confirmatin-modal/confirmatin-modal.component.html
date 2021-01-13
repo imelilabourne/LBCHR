@@ -1,3 +1,18 @@
-<p>
-  confirmatin-modal works!
-</p>
+
+<ng-template #confirmationModal>
+  <div class="modal-wrapper">
+      <div> <i class="fa fa-info" style="color: gray; font-size: 60px;"></i></div>
+  <div class="modal-body">
+    <h4 style="border-bottom: 1px solid;" class="modal-title">MESSAGE</h4>
+
+    This action will sumbmit your application details. Are you sure you want to proceed?
+  </div>
+  </div>
+  
+  <div class="modal-footer d-flex justify-content-center" >
+    <button type="button" routerLink="../inquire" aria-label="Close" (click)="modalRef.hide()">Yes</button>
+    <button type="button"  aria-label="Close" (click)="modalRef.hide()" >No</button>
+  </div>
+  
+
+</ng-template>

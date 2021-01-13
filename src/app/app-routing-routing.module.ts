@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'inquire', component: InquireComponent},
   {path: 'inquire-summary', component: InquireSummaryComponent},
   {path: 'inquire-client', component: ClientInfoComponent},
-  {path: 'customer-summary', component: CustomerDetailSummaryComponent},
+  {path: 'inquire-summary-update', component: CustomerDetailSummaryComponent},
 ];
 
 @NgModule({

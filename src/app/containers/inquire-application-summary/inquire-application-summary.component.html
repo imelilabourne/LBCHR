@@ -202,7 +202,7 @@
 
   
 
-  <div class="d-flex justify-content-between">
+  <div *ngIf="showContent" class="d-flex justify-content-between">
     <a routerLink="/inquire"><i class="fa fa-chevron-left"></i>Back</a>
     <button class="continue-btn" routerLink="/inquire-client">Continue Application</button>
   </div>
