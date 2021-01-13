@@ -15,3 +15,14 @@ span{
     }
 
 }
+
+
+button{
+    width: 40px; height: 30px;
+    border: none;   
+    margin: 24px 0 0 -10px;
+}
+
+button > i{
+    font-size: 12px;
+}

@@ -12,16 +12,16 @@ import { QuestionControlService } from 'src/app/components/shared/question-contr
 export class ValidIdFormGroupComponent implements OnInit {
 
   @Input() validIdInfo: QuestionBase<string>[] = [];
-  form: FormArray;
+  form: FormGroup;
  
   constructor(private qcs: QuestionControlService, private formBuilder: FormBuilder ) { }
 
   ngOnInit() {
-    this.form =  this.qcs.toFormArray(this.validIdInfo);
+    this.form =  this.qcs.toFormGroup(this.validIdInfo);
   }
 
   addContact() {
-    (<FormArray>this.form.controls['contacts']).push(this.initialContacts());
+    // (<FormArray>this.form.controls['contacts']).push(this.initialContacts());
     
   }
 
