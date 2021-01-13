@@ -1,12 +1,11 @@
 
   <div class="container-fluid" [formGroup]="form">
-      <div class="row">
-        <label class="col-md-4
-          control-label label"
+      <div [ngClass] = "{'row': !isSearchCriteria}">
+        <label class="
+          control-label label" [ngClass]  =  "{'col-md-4': !isSearchCriteria}"
            [attr.for]="question.key">{{question.label}}</label>
 
-
-        <div [ngSwitch]="question.controlType" class="col-md-8">
+        <div [ngSwitch]="question.controlType" class="col-md-8" [ngClass]  = "{'col-md-8': !isSearchCriteria}">
           <input class="form-control input" *ngSwitchCase="'textbox'" [formControlName]="question.key"
                   [id]="question.key" [type]="question.type" [placeholder]="question.placeholder" [attr.disabled] = "question.disabled? '' :  null ">
       

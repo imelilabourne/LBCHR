@@ -33,16 +33,10 @@ export class InquireMaintenanceComponent implements OnInit {
       this.reqService.getRequest().subscribe(data => {
       this.tableValues  = data;
       this.tableValArray =  this.tableValues.result;
-      console.log(data);
-      
-    },  (error => this.inquireService.getApplication().subscribe(data => {
+    },  (() => this.inquireService.getApplication().subscribe(data => {
       //when 1st request fails
         this.tableValArray = data;
       })
-       
-      // this.tableValArray.push(data[0]);
-      // this.tableValArray.push(data[1]);
-      // this.tableValArray.push(data[2])
     ))
   }
 

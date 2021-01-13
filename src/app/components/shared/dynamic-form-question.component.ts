@@ -19,6 +19,6 @@ export class DynamicFormQuestionComponent {
 
 
   ngOnInit(){
-    this.isSearchCriteria = this.location.path() === '/inquire'
+    this.isSearchCriteria = this.location.path() === '/inquire-client'
   }
 }
