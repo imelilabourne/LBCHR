@@ -2,9 +2,9 @@
   <div class="container-fluid" [formGroup]="form">
       <div [ngClass] = "{'row': !isSearchCriteria}">
         <label class="
-          control-label label" [ngClass]  =  "{'col-md-4': !isSearchCriteria}"
+          control-label" [ngClass]  =  "{'col-md-4': !isSearchCriteria, 'bold': isSearchCriteria}"
            [attr.for]="question.key">{{question.label}}</label>
-
+           <span class="required-asterisk" style="color: red;" *ngIf="question.required">*</span>
         <div [ngSwitch]="question.controlType" class="col-md-8" [ngClass]  = "{'col-md-8': !isSearchCriteria}">
           <input class="form-control input" *ngSwitchCase="'textbox'" [formControlName]="question.key"
                   [id]="question.key" [type]="question.type" [placeholder]="question.placeholder" [attr.disabled] = "question.disabled? '' :  null ">

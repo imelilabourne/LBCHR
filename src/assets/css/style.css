@@ -106,3 +106,12 @@ thead{
     display: inline-block;
 }
 
+.bold{
+    font-weight: bold !important;
+}
+
+.errorMessage{
+    font-size: 10px;
+    color: red;
+    margin: 0;
+}

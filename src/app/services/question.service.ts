@@ -15,8 +15,6 @@ export class QuestionService {
         key: 'applicationNo',
         label: 'Application No.',
         value: 'PA00000000001',
-        required: true,
-        disabled: true,
         order: 1
       }),
       
@@ -81,12 +79,11 @@ export class QuestionService {
         label: 'Name of Customer',
         placeholder: 'First Name',
         value: '',
-        required: false,
+        required: true,
         order: 1
       }),
 
       new TextboxQuestion({
-        label: "",
         key: 'middleName',
         placeholder: 'Middle Name',
         order: 2
@@ -103,6 +100,7 @@ export class QuestionService {
         label: 'Date of Birth',
         placeholder: 'MM/DD/YYYY',
         type: "date",
+        required: true,
         order: 5
       }),
 
@@ -110,6 +108,7 @@ export class QuestionService {
         key: 'nationality1',
         placeholder: 'Select Country',
         label: 'Nationality',
+        required: true,
         options: [
           {key: 'ph',  value: 'Phillippines'},
           {key: 'jp',  value: 'Japan'},
@@ -126,6 +125,7 @@ export class QuestionService {
         key: 'sex',
         label: 'Sex',
         placeholder: 'Select',
+        required: true,
         options: [
           {key: 'f',  value: 'Female'},
           {key: 'm',  value: 'Male'}
@@ -136,6 +136,7 @@ export class QuestionService {
       new TextboxQuestion({
         key: 'birthPlace',
         label: 'Place of Birth',
+        required: true,
         order: 7
       }),
       
@@ -144,6 +145,7 @@ export class QuestionService {
         key: 'civilStatus',
         label: 'Civil Status',
         placeholder:'Select Civil Status',
+        required: true,
         options: [
           {key: 'sin',  value: 'Single'},
           {key: 'mar',  value: 'Married'},
@@ -164,6 +166,7 @@ export class QuestionService {
         key: 'streetNo',
         label: 'No./Street',
         placeholder: 'No./Street',
+        required: true,
         order: 10
       }),
 
@@ -185,20 +188,23 @@ export class QuestionService {
         key: 'province',
         label: 'Province',
         placeholder: 'Province',
+        required: true,
         order: 13
       }),
 
       new TextboxQuestion({
         key: 'city',
         label: 'City/Municipality',
+        required: true,
         placeholder: 'Subd./Brgy./Dist1',
         order: 14
       }),
 
       new TextboxQuestion({
-        key: 'nationality2',
-        label: 'Nationality',
+        key: 'country',
+        label: 'Country',
         placeholder: 'Select Country',
+        required: true,
         order: 15
       }),
 
@@ -206,6 +212,7 @@ export class QuestionService {
         key: 'zipCode',
         label: 'Zip Code',
         placeholder: 'Zip Code',
+        required: true,
         order: 16
       }),
 
@@ -238,6 +245,7 @@ export class QuestionService {
         key: 'idType',
         label: 'Type of ID',
         placeholder:'Select a Valid ID',
+        required: true,
         options: [
           {key: 'sin',  value: 'Single'},
           {key: 'mar',  value: 'Married'},
@@ -249,6 +257,7 @@ export class QuestionService {
       new TextboxQuestion({
         key: 'idNumber',
         label: 'ID Number',
+        required: true,
         order: 2
       }),
     ]
@@ -261,6 +270,7 @@ export class QuestionService {
         key: 'occupation',
         label: 'Occupation',
         placeholder:'Select Occupation',
+        required: true,
         options: [
           {key: 'Emp',  value: 'Employed'},
           {key: 'sEmp',  value: 'Self-Employed'},
@@ -273,6 +283,7 @@ export class QuestionService {
         key: 'fundSource',
         label: 'Primary Source of Funds',
         placeholder:'Select Source of Fund',
+        required: true,
         options: [
           {key: 'sal',  value: 'Salary'},
           {key: 'int',  value: 'Interest'},
@@ -285,6 +296,7 @@ export class QuestionService {
         key: 'amountRange',
         label: 'Monthly Gross Income/Pension/Allowance',
         placeholder:'Select Amount Range',
+        required: true,
         options: [
           {key: 's',  value: 'Php 30,000 & Below'},
           {key: 'm',  value: 'Php 30,000.01  - Php 50,000'},
