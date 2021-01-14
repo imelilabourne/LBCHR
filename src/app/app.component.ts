@@ -37,19 +37,4 @@ export class AppComponent {
     this.applications$  =  this.store.select('applications');
   }
 
-  editText(){
-    this.store.dispatch(new PostActions.EditText(this.text))
-  }
-
-  resetPost(){
-    this.store.dispatch(new PostActions.Reset());
-  }
-
-  upvote(){
-    this.store.dispatch(new PostActions.Upvote())
-  }
-  
-  downvote(){
-    this.store.dispatch(new PostActions.Downvote())
-  }
 }
