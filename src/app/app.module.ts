@@ -29,6 +29,13 @@ import { WarningErrorComponent } from './components/shared/modals/warning-error/
 // import { ModalModule } from 'ngx-bootstrap';
 import { ModalModule} from 'ngx-bootstrap/modal';
 import { ConfirmatinModalComponent } from './components/shared/modals/confirmatin-modal/confirmatin-modal.component';
+import { StoreModule } from '@ngrx/store';
+import { simpleReducer } from './simple.reducer';
+import { postReducer } from './post.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { applicationReducer } from 'src/store/reducers/application.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { ApplicationEffects } from '../store/effects/application.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +68,14 @@ import { ConfirmatinModalComponent } from './components/shared/modals/confirmati
     ModalModule.forRoot(),
     ReactiveFormsModule,
     NgbModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({message : simpleReducer,
+    applications: applicationReducer
+    }),
+    EffectsModule.forRoot([ApplicationEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 10
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
