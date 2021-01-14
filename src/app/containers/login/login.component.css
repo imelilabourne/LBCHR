@@ -1,3 +1,20 @@
+#login-box.panel .panel-body .btn {
+  width: 100%;
+  padding: 6px 15px;
+}
+
+#login-box.panel .panel-body * {
+  margin-bottom: 5px;
+}
+
+#login-box.panel .panel-heading {
+  background-image:  url(../../../assets/img/LANDBANK_LOGO.jpg);
+  height: 80px;
+  margin-top: 20px;
+}
+
+
+
 .login-button{
   width: 105px;
 }
