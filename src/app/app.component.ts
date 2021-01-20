@@ -37,8 +37,8 @@ export class AppComponent {
   onSubmitForm(){
     console.log(this.form.getRawValue());
     this.store.dispatch(
-    // new ApplicationActions.AddApplicationSuccess(this.form.getRawValue())
-    new ApplicationActions.UpdateApplication(this.form.getRawValue())
+    new ApplicationActions.AddApplicationSuccess(this.form.getRawValue())
+    // new ApplicationActions.UpdateApplication(this.form.getRawValue())
     ) 
   }
 }

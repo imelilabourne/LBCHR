@@ -39,7 +39,7 @@ export function applicationReducer(
     case UPDATE_APPLICATION_SUCCESS:
         {
         return{
-            list: [...state.list, {requestNo: 1, ...action.payload}]
+            list: [...state.list, {requestNo: state.list.length  + 1, ...action.payload}]
         }
     }  
   return state;
