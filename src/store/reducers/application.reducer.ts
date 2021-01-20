@@ -1,26 +1,48 @@
-import { Action } from "@ngrx/store";
-import { ApplicationsActions, LOAD_APPLICATIONS, LOAD_APPLICATIONS_SUCCESS } from "../actions/application.action";
+import {
+    ADD_APPLICATION, ADD_APPLICATION_SUCCESS,
 
-export interface Application{ 
-    applicationNo: number;
-    name: string;
+    ApplicationsActions, LOAD_APPLICATIONS,
+
+    LOAD_APPLICATIONS_SUCCESS,
+    UPDATE_APPLICATION_SUCCESS
+} from "../actions/application.action";
+
+export interface Application {
+
+  list:any[]
 }
 
-const defaultState: Application[] = [
+const initialState: Application = {
+    list:[]
+};
 
-]
-export function applicationReducer(state: Application[] = defaultState, action: ApplicationsActions){
-    switch(action.type){
-        case LOAD_APPLICATIONS:
-            return {
-                ...state,
-                loading: false
-            }
-        case LOAD_APPLICATIONS_SUCCESS:
-            return {
-                ...state,
-                list: action.payload
-            }
-        default: return state
-    }
+export function applicationReducer(
+  state: Application = initialState,
+  action: ApplicationsActions
+) {
+  switch (action.type) {
+    case LOAD_APPLICATIONS:
+      return {
+        ...state,
+      };
+    case LOAD_APPLICATIONS_SUCCESS:
+      return {
+          list: [...action.payload]
+      }
+
+    case ADD_APPLICATION:
+      return {
+        ...state,
+      };
+
+    case ADD_APPLICATION_SUCCESS:
+    case UPDATE_APPLICATION_SUCCESS:
+        {
+        return{
+            list: [...state.list, {requestNo: 1, ...action.payload}]
+        }
+    }  
+  return state;
+
+  }
 }

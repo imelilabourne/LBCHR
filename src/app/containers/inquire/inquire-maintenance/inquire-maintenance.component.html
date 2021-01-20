@@ -3,7 +3,6 @@
     <app-search-criteria-form-group style="text-align: end;" [questions]="questions$ | async"></app-search-criteria-form-group>
 
 </div>
-
 <div class="section-content">
   <div class="">
     <!-- second container-div -->
@@ -26,7 +25,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr (click)="onRowClick($event, app)"  *ngFor="let app of tableValArray">
+          <tr (click)="onRowClick($event, app)"  *ngFor="let app of (tableValArray$ | async)">
             <td style="text-align: center;"><input name="app.requestNo" [value]="app" type="radio" ></td>
             <td>{{app.requestNo}}</td>
             <td>{{ app.projectName }}</td>

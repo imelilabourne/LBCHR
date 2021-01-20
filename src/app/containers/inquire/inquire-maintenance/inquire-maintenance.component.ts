@@ -1,12 +1,18 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Store } from '@ngrx/store';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 import { Observable } from 'rxjs';
+import { WarningErrorComponent } from 'src/app/components/shared/modals/warning-error/warning-error.component';
 import { QuestionBase } from 'src/app/components/shared/question-base';
+import { InquireService } from 'src/app/services/inquire.service';
 import { QuestionService } from 'src/app/services/question.service';
 import { RequestService } from 'src/app/services/request.service';
-import { WarningErrorComponent } from 'src/app/components/shared/modals/warning-error/warning-error.component';
-import { InquireService } from 'src/app/services/inquire.service';
+import { Application } from 'src/store/reducers/application.reducer';
+import * as ApplicationActions from "../../../../store/actions/application.action";
+interface AppState {
+  applications: any;
+}
 @Component({
   selector: 'app-inquire-maintenance',
   templateUrl: './inquire-maintenance.component.html',
@@ -17,7 +23,7 @@ export class InquireMaintenanceComponent implements OnInit {
 
   questions$: Observable<QuestionBase<any>[]>;
   tableValues;
-  tableValArray : any;
+  tableValArray$ : Observable<Application>;
   selectedRequest;
   modalRef: BsModalRef;
   isChecked: boolean = false;
@@ -26,19 +32,24 @@ export class InquireMaintenanceComponent implements OnInit {
   constructor(service: QuestionService, 
     private reqService: RequestService,
     private inquireService: InquireService, 
-    private router: Router) {
+    private router: Router,
+    private store: Store<AppState>) {
       this.questions$ = service.getQuestions();
   }
 
   ngOnInit() {
-      this.reqService.getRequest().subscribe(data => {
-      this.tableValues  = data;
-      this.tableValArray =  this.tableValues.result;
-    },  (() => this.inquireService.getApplication().subscribe(data => {
-      //when 1st request fails
-        this.tableValArray = data;
-      })
-    ))
+    //   this.reqService.getRequest().subscribe(data => {
+    //   this.tableValues  = data;
+    //   this.tableValArray =  this.tableValues.result;
+    // },  (() => this.inquireService.getApplication().subscribe(data => {
+    //   //when 1st request fails
+    //     this.tableValArray = data;
+    //   })
+    // ))
+    this.store.dispatch(new ApplicationActions.LoadApplications());
+
+    this.tableValArray$ = this.store.select((store) => store.applications.list);
+
   }
 
   onRowClick(event, app){
