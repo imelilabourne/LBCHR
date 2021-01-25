@@ -1,90 +1,88 @@
-<head>
-  <!--<link href="https://tst.dynamsoft.com/libs/dwt/14.1/dynamsoft.webtwain.css?t=20180120" rel="stylesheet" />
-  <script src="https://tst.dynamsoft.com/libs/dwt/14.1/dynamsoft.webtwain.install.js?t=20180120" async=""
-    charset="utf-8"></script>-->
 
-  <title>Landbank Corporate HR</title>
-</head>
 
-<body class="background-image">
-  <!--- <app-root _nghost-c0="" class="ng-tns-c0-0" ng-version="6.0.3">
-    <main _ngcontent-c0="" class="ng-tns-c0-0 ng-trigger ng-trigger-routerTransition">--->
-  <!---  <router-outlet _ngcontent-c0="" class="ng-tns-c0-0"></router-outlet>--->
-  <login _nghost-c1="" class="ng-star-inserted">
-    <form _ngcontent-c1="" class="panel ng-pristine ng-invalid ng-touched" id="login-box" novalidate="">
-      <div _ngcontent-c1="" class="panel-heading"></div>
-      <div _ngcontent-c1="" class="panel-body">
-        <div _ngcontent-c1="" class="error-holder">
-          <!---->
-          <!---->
-          <!---->
+    <form id="login-box" class="panel" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+     
+      <div class="panel-heading">       
+        <div class="login-header-image">
+        <div class="header-image">
+          <img src="../../../assets/img/LANDBANK_LOGO.jpg" alt="Landbank Logo" width="100px" height="10px">
         </div>
-        <div _ngcontent-c1="">
-          <div _ngcontent-c1="" class="input-group">
-            <div _ngcontent-c1="" class="input-group-addon">
-              <i _ngcontent-c1="" class="fa fa-user-o"></i>
-            </div>
-            <input _ngcontent-c1="" autocomplete="new-text" class="form-control ng-pristine ng-invalid ng-touched"
-              formcontrolname="username" id="usr_id" placeholder="User ID" type="text" />
+      </div>
+      </div>
+      <div class="panel-body">
+             <div class="error-holder"> 
+          <div class="force-logout" *ngIf="errorMessage && errorMessage != 'Force Logout' && !showLoading">
+              <div class="alert alert-danger">
+              {{errorMessage}}
+              </div>
           </div>
-          <control-messages _ngcontent-c1="" _nghost-c2="">
-            <!---->
-            <div _ngcontent-c2="" class="err-inline ng-star-inserted">
-              <span _ngcontent-c2="" class="fa fa-times-circle" style="font-size: 10px; color: red"></span>
-              Mandatory
-            </div>
-          </control-messages>
-        </div>
-        <div _ngcontent-c1="">
-          <div _ngcontent-c1="" class="input-group">
-            <div _ngcontent-c1="" class="input-group-addon">
-              <i _ngcontent-c1="" class="fa fa-key"></i>
-            </div>
-            <input _ngcontent-c1="" autocomplete="new-password" class="form-control ng-pristine ng-invalid ng-touched"
-              formcontrolname="password" id="usr_password" placeholder="Password" type="password" />
+          <div *ngIf="dataPasserService.showLoading" class="loader">
+            <div class="login-loader"></div>
+            <p>Logging In</p>
           </div>
-          <control-messages _ngcontent-c1="" _nghost-c2="">
-            <!---->
-            <div _ngcontent-c2="" class="err-inline ng-star-inserted">
-              <span _ngcontent-c2="" class="fa fa-times-circle" style="font-size: 10px; color: red"></span>
-              Mandatory
-            </div>
-          </control-messages>
+          <div class="force-logout" *ngIf="errorMessage && errorMessage == 'Force Logout' && !showLoading">
+
+              <div class="alert alert-danger">
+                  Your User ID is currently logged in. You can <a (click)="remoteLogout();"  style="cursor: pointer;">click here</a> to log
+                  it out. If you are not aware of this activity please contact your system administrator.
+              </div>
+
+          </div>
+       </div>
+        
+
+  
+
+        <div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                <i class="fa fa-user-o"></i>
+              </div>
+              </div>
+              <input id="usr_id" formControlName="username" class="form-control" type="text" autocomplete="new-text" placeholder="User ID"/>
+          </div>
+          <control-messages [control]="loginForm.controls.username"></control-messages>
         </div>
-        <button _ngcontent-c1="" class="btn btn-success" type="submit">
+      </div>
+              
+        <div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                <i class="fa fa-key"></i>
+              </div>
+            </div>
+              <input id="usr_password" formControlName="password" class="form-control" placeholder="Password" type="password" autocomplete="new-password"/>
+          </div>
+          <control-messages [control]="loginForm.controls.password"></control-messages>
+        </div>
+      </div>
+
+
+        <button type="submit" class="btn btn-success">
           Login
         </button>
+        <div>
+            <!-- <a id="forgot-pw"  (click)="goToChangePassword();" style="cursor: pointer">Change Password</a> -->
+        </div>
         <div _ngcontent-c1="">
           <a _ngcontent-c1="" class="pull-right" id="forgot-pw" style="cursor: pointer">Forgot Password?</a>
         </div>
       </div>
-      <div _ngcontent-c1="" class="panel-footer" id="login-reminders">
-        <h6 _ngcontent-c1="">Important</h6>
-        <ul _ngcontent-c1="" class="list-group">
-          <li _ngcontent-c1="" class="list-group-item" xlabel="loginRem1">
-            Password is case sensitive
-          </li>
-          <li _ngcontent-c1="" class="list-group-item" xlabel="loginRem2">
-            For your security, you have a limited number of attempts to supply
-            the correct credentials.
-          </li>
-          <li _ngcontent-c1="" class="list-group-item" xlabel="loginRem3">
-            Do not forget to logout the application once you completed your
-            transaction.
-          </li>
+  
+      <div class="panel-footer" id="login-reminders">
+        <h6>Important</h6>
+        <ul class="list-group">
+          <li class="list-group-item" xlabel="loginRem1">Password is case sensitive</li>
+          <li class="list-group-item" xlabel="loginRem2">For your security, you have a limited number of attempts to supply the correct credentials.</li>
+          <li class="list-group-item" xlabel="loginRem3">Do not forget to logout the application once you completed your transaction.</li>
         </ul>
-        <span _ngcontent-c1="">
-          <h3 _ngcontent-c1="">Version 2.0.25</h3>
-        </span>
-        <div _ngcontent-c1=""></div>
-      </div>
-    </form>
-  </login>
-  <!---</main>
-  </app-root>--->
-  <noscript>Please enable JavaScript to continue using this application.</noscript>
-  <!--- <script type="text/javascript" src="/Corporate/runtime.68763a61ba7c020ec3e5.js"></script>
-  <script type="text/javascript" src="/Corporate/polyfills.ba8b2325122b8e7053ce.js"></script>
-  <script type="text/javascript" src="/Corporate/scripts.af152f7d7ccbbf26429d.js"></script>
-  <script type="text/javascript" src="/Corporate/main.4658b5839542eb9b9407.js"></script>-->
-</body>
+          <span><h3>Version {{version}}</h3></span>
+        <div>
+
+        </div>                      
+      </div>                
+  </form>
