@@ -1,3 +1,7 @@
-<personal-information-form-group [personalInfo] = "personalInfo$ | async"></personal-information-form-group>
+<personal-information-form-group #personalInfo [personalInfo] = "personalInfo$ | async"></personal-information-form-group>
 <valid-id-form-group  [validIdInfo] = "validIdInfo$ | async"></valid-id-form-group>
 <financial-information-form-group [financialInfo] = "financialInfo$ | async"></financial-information-form-group>
+
+<div class="container-fluid">
+    <button class="btn-success pull-right" (click)="onNext()" routerLink="../inquire-summary-update">Next</button>
+</div>

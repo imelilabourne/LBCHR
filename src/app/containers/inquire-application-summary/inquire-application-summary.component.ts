@@ -25,7 +25,8 @@ export class InquireSummaryComponent implements OnInit {
   // }
   //   )
   localStorage.setItem("selectedRequest", JSON.stringify(this.dataPasserService.application))
-    this.selectedRequest = this.dataPasserService.application
+  
+  this.selectedRequest = this.dataPasserService.application
   this.showContent  = this.location.path() === '/inquire-summary'; 
     
   }

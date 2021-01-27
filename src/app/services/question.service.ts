@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-
 import { of } from 'rxjs';
 import { QuestionBase } from '../components/shared/question-base';
 import { DropdownQuestion } from '../components/shared/question-dropdown';
 import { TextboxQuestion } from '../components/shared/question-textbox';
+
 
 @Injectable()
 export class QuestionService {
@@ -75,7 +75,7 @@ export class QuestionService {
       }),
 
       new TextboxQuestion({
-        key: 'customerName',
+        key: 'firstName',
         label: 'Name of Customer',
         placeholder: 'First Name',
         value: '',
@@ -96,7 +96,7 @@ export class QuestionService {
       }),
 
       new TextboxQuestion({
-        key: 'birthDate',
+        key: 'birthDay',
         label: 'Date of Birth',
         placeholder: 'MM/DD/YYYY',
         type: "date",
@@ -105,7 +105,7 @@ export class QuestionService {
       }),
 
       new DropdownQuestion({
-        key: 'nationality1',
+        key: 'nationality',
         placeholder: 'Select Country',
         label: 'Nationality',
         required: true,

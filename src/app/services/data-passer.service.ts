@@ -8,4 +8,5 @@ export class DataPasserService{
     constructor(){}
 
     public application: any;
+    public applicationSummary: any;
 }

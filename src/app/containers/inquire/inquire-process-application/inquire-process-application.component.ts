@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { QuestionBase } from 'src/app/components/shared/question-base';
+import { PersonalInformationFormGroupComponent } from 'src/app/generic/personal-information-form-group/personal-information-form-group.component';
+import { DataPasserService } from 'src/app/services/data-passer.service';
 import { QuestionService } from 'src/app/services/question.service';
 
 @Component({
@@ -14,13 +16,21 @@ export class InquireProcessApplicationComponent implements OnInit {
   validIdInfo$: Observable<QuestionBase<any>[]>;
   financialInfo$: Observable<QuestionBase<any>[]>;
 
-  constructor(service: QuestionService) { 
+  @ViewChild('personalInfo') personalInfo: PersonalInformationFormGroupComponent; 
+
+  constructor(service: QuestionService, private dataPasserService: DataPasserService) { 
     this.personalInfo$ = service.getPersonalInfo();
     this.validIdInfo$ = service.getValidID();
     this.financialInfo$ = service.getFinancialInfo();
   }
 
   ngOnInit() {
+  }
+
+  onNext(){
+    this.personalInfo.updateForm();
+    console.log(this.dataPasserService.application);
+    
   }
 
 }
