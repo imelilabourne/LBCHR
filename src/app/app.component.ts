@@ -1,3 +1,4 @@
+import { Location } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormBuilder } from "@angular/forms";
 import { Store } from "@ngrx/store";
@@ -16,13 +17,16 @@ interface AppState {
 })
 export class AppComponent {
   title = "LBCHR-App";
-
+  showNavbar: boolean =  false;
   text: string;
 
   applications$: Observable<Array<Application>>;
-  constructor(private store: Store<fromApplication.State>, private fb: FormBuilder, private reqService: InquireService) {}
+  constructor(private store: Store<fromApplication.State>, private fb: FormBuilder, private reqService: InquireService, private location: Location) {}
 
   ngOnInit() {
+    if(this.location.path() !== '/login'){
+      this.showNavbar = true;
+    }
     // this.store.dispatch(new ApplicationActions.LoadApplications());
 
     // this.applications$ = this.store.select((store) => store.applications.list);
