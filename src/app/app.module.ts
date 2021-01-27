@@ -8,7 +8,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 // import { ModalModule } from 'ngx-bootstrap';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { applicationReducer } from 'src/store/reducers/application.reducer';
+import { BusyModule } from 'ngx-busy';
+import { reducer } from 'src/store/reducers';
 import { ApplicationEffects } from '../store/effects/application.effects';
 import { AppRoutingRoutingModule } from './app-routing-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +34,6 @@ import { FinancialInformationFormGroupComponent } from './generic/financial-info
 import { PersonalInformationFormGroupComponent } from './generic/personal-information-form-group/personal-information-form-group.component';
 import { SearchCriteriaFormGroupComponent } from './generic/search-criteria-form-group/search-criteria-form-group.component';
 import { ValidIdFormGroupComponent } from './generic/valid-id-form-group/valid-id-form-group.component';
-import { simpleReducer } from './simple.reducer';
 
 @NgModule({
   declarations: [
@@ -68,9 +68,8 @@ import { simpleReducer } from './simple.reducer';
     ReactiveFormsModule,
     NgbModule.forRoot(),
     HttpClientModule,
-    StoreModule.forRoot({message : simpleReducer,
-    applications: applicationReducer
-    }),
+    BusyModule,
+    StoreModule.forRoot(reducer),
     EffectsModule.forRoot([ApplicationEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 10

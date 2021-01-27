@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, TemplateRef, EventEmitter, ViewChild } from '@angular/core';
-import  { BsModalRef, BsModalService, ModalDirective } from'ngx-bootstrap/modal';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { BsModalRef, BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 @Component({
   selector: 'warning-error',
   templateUrl: './warning-error.component.html',
@@ -18,11 +18,5 @@ export class WarningErrorComponent implements OnInit {
 
   public openModal(){
     this.modalRef = this.modalService.show(this.warningError);
-    // this.modalShow.emit(template);
   }
-
-  // public show(){
-  //   this.template.show();
-  // }
-
 }
